@@ -1,0 +1,64 @@
+{% extends "base.html" %}
+
+{% block title %}
+| {{ school.title }} | {{ location.title }}
+{% endblock %}
+
+{% block header %}
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<script type="text/javascript" src="https://www.google.com/jsapi?key=ABQIAAAAkoUi8VjuOpJAvjzJ9geq_BSGaG8a6K1R77KuSAaZSRoshbz0_xQzt2s_7EFalEr9cofoyPipnlbdbw"></script>
+{% endblock %}
+
+{% block buttons %}<li class="right"><a href="/static/img/{{ school.name }}/map/campus_map.pdf"><img src="/static/img/map.png" alt="Map"><br>Map</a></li>{% endblock %}
+
+{% block breadcrumb %}
+<b style="font-size:14px">{{ location.name }} at {{ school.title }}</b><br>
+&rarr; {{ location.title }}
+{% endblock %}
+
+{% block content %}
+<script type="text/javascript">
+google.load("maps", "2");
+</script>
+<div id="map" style="width:750px; height: 400px"></div>
+
+
+<div style="background:#647d8f; text-align:center;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5174361591369676";
+/* Schedr 2.0 umass Lobby */
+google_ad_slot = "6111435356";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+
+<script>
+var map = new google.maps.Map2(document.getElementById("map"));
+map.addControl(new GLargeMapControl());
+var copyCollection = new GCopyrightCollection('Chart');
+var copyright = new GCopyright(1, new GLatLngBounds(new GLatLng(-90, -180), new GLatLng(90, 180)), 0, '&copy;2009 Schedr.com');
+copyCollection.addCopyright(copyright);
+
+var widths = {2: 4, 3: 8, 4: 16, 5: 32};
+
+var tilelayers = [new GTileLayer(copyCollection, 2, 5)];
+tilelayers[0].getTileUrl = function (a, b) {
+	var f = "/static/img/{{ school.name }}/map/" + b + "/tiles_" + (a.x + (widths[b] * a.y)) + ".png";
+	return f;
+}
+
+var schoolmap = new GMapType(tilelayers, new GMercatorProjection(6), "Chart", {errorMessage:'No chart data available'});
+map.setMapType(schoolmap);
+{% if location.lat %}
+var center = new GLatLng({{ location.lat }}, {{ location.lng }});
+map.setCenter(center, {{ location.zoom }});
+map.addOverlay(new GMarker(center));
+{% endif %}
+
+</script>
+{% endblock %}

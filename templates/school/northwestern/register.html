@@ -1,0 +1,34 @@
+{% extends "base/base.html" %}
+
+{% block title %} | Register on SPIRE{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block breadcrumb %}<span><b style="font-size:12px; line-height:30px;">{{ user.email }}</b></span>{% endblock %}
+
+{% block buttons %}
+<li class="right"><a href="http://www.schedr.com/help"><img src="/static/img/help.png" alt="Help"><br>Help</a></li>
+<li class="right"><a href="/{{ school.name }}/{{ term.name }}/" title="Back to calendar"><img src="/static/img/back.png"><br>Calendar</a></li>
+{% if user.is_staff %}
+<li class="right"><a href="http://www.schedr.com/admin"><img src="/static/img/admin.png"><br>Admin</a></li>
+{% endif %}
+{% endblock %}
+
+
+{% block content %}
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<table width="100%" cellspacing="0" cellpadding="0"><tr><td width="120" valign="top">
+<h2 style="text-align:center;background:#647d8f;color:white;margin:0px;">{{ term }}</h2>
+<table width="100%" style="background:#647d8f;color:white;">
+{% for course, sections in courses.items %}
+<tr><th colspan=2 style="font-size:12px;padding-top:10px;">{{ course }}</th></tr>
+{% for section in sections %}
+<tr><td style="text-align:right;font-size:12px;">{{ section.get_type_short }}: </td><td><input type="text" value="{{ section.school_id }}" size="5" readonly="1"></td></tr>
+{% endfor %}
+{% endfor %}
+</table><br>
+<center><a href="https://ses.ent.northwestern.edu/psc/s9prod/EMPLOYEE/HRMS/?cmd=logout" target="caesar" onclick="$('#iframe_caesar')[0].src='https://ses.ent.northwestern.edu/psc/s9prod/EMPLOYEE/HRMS/?cmd=logout';setTimeout('$(\'#iframe_caesar\')[0].src=\'https://ses.ent.northwestern.edu/psc/s9prod/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_CART.GBL?Page=SSR_SSENRL_CART&Action=A\';', 150);return false;" style="color:red">Click here<br>to log out of CAESAR</a></center>
+</td><td><iframe name="caesar" frameborder="0" id="iframe_caesar" src="https://ses.ent.northwestern.edu/psc/s9prod/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.SSR_SSENRL_CART.GBL?Page=SSR_SSENRL_CART&Action=A" style="background:white" width="100%" height="550"></td></tr></table>
+{% endblock %}

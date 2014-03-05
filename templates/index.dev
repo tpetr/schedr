@@ -1,0 +1,83 @@
+<html>
+<head>
+<title>Schedr &raquo; Quick and easy course scheduling!</title>
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+<div class="container">
+<div id="login">
+{% if user.is_authenticated %}
+<p>Logged in as {{ user.username }} ({{ user.schedruser.school.title }})</p>
+<p><a href="/home">My Schedule</a> || <a href="/account/logout">Logout</a></p>
+{% else %}
+<form action="/account/login/" method="post">
+<table class="login">
+<tr><th>Username<br>or Email</th><td><input maxlength="75" name="name"></td></tr>
+<tr><th>Password</th><td><input type="password" name="password"></td></tr>
+<tr><th>&nbsp;</th><th><input type="submit" value="Login"></th></tr>
+</table>
+<a href="/account/register">Register for free</a>
+</form>
+{% endif %}
+</div>
+<img src="/static/img/schedr.png">
+</div>
+</div>
+<div id="info">
+<div class="container">
+
+<div style="text-align:center;padding:30px 0px;"><span style="font-size:25px">Course scheduling is a pain. </span><span style="font-size:40px">Schedr makes it easy.</span></div>
+<table width="100%"><tr height="344"><td width="50%">
+<div style="font-size:22px">
+<ul>
+<li>Pick your classes for next semester</li>
+<li>Find a class to satisfy requirements</li>
+<li>Import the classes you're taking now</li>
+<li>Print out a spiffy PDF schedule</li>
+<li>Sync your schedule with other apps</li>
+<li>Share your schedule with friends</li>
+<li><i>And much more!</li></li>
+</ul>
+</div>
+</td><td width="50%" align="center" valign="middle">
+<div style="width:301px;padding-top:16px;background:url(/static/img/bubble_top.png) no-repeat top;color:black;margin:0px 20px;">
+<div style="padding:0px 15px;background:white;border-left:1px solid; border-right: 1px solid;text-align:center;">
+{{ feedback.text }}
+</div>
+<div style="text-align:left;padding-top:40px;padding-left:30px;color:white;background:url(/static/img/bubble_bottom.png) no-repeat top;">
+{% if feedback.author %}{{ feedback.author }}{% if feedback.title %} of {% if feedback.url %}<a href="{{ feedback.url }}">{% endif %}{{ feedback.title }}{% if feedback.url %}</a>{% endif %}{% endif %}{% else %}Anonymous{% endif %}
+</div>
+</div>
+
+</td></tr>
+<tr><td width="50%">
+<div style="text-align:center;padding:40px">
+<h2><a href="/account/register">Click here to register now</a></h2>
+<h3>It's free, and only takes a second!</h3>
+</div>
+</td><td width="50%">
+<object width="425" height="344"><param name="movie" value="http://www.youtube.com/v/otGeV6wFwRk&hl=en&fs=1&rel=0"></param><param name="allowFullScreen" value="true"></param><param name="allowscriptaccess" value="always"></param><embed src="http://www.youtube.com/v/otGeV6wFwRk&hl=en&fs=1&rel=0" type="application/x-shockwave-flash" allowscriptaccess="always" allowfullscreen="true" width="425" height="344"></embed></object>
+</td></tr></table>
+</div>
+</div>
+<div id="footer">
+<div class="container">
+<ul>
+<li><a href="/info/about">About</a></li>
+<li><a href="/info/press">Press</a></li>
+<li><a href="/info/contact">Contact</a></li>
+<li>&copy; Schedr.com 2007-2009</li>
+</ul>
+<ul>
+<li><a href="http://www.facebook.com/pages/Schedr/43331106562" target="_blank">Become a Fan</a></li>
+<li><a href="http://www.twitter.com/schedr" target="_blank">Follow Us</a></li>
+</ul>
+<ul style="text-align:right">
+<li><a href="http://www.djangoproject.com/" target="_blank"><img src="http://media.djangoproject.com/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a></li>
+<li><a href="http://www.jquery.com/"><img src="http://drupal.org/files/images/jq.png" border="0"></a></li>
+</ul>
+</div>
+</div>
+</body>
+</html>

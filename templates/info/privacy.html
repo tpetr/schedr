@@ -1,0 +1,56 @@
+<html>
+<head>
+<title>Schedr &raquo; Privacy</title>
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+<div class="container">
+<div id="login">
+{% if user.is_authenticated %}
+<p>Logged in as {{ user.username }} ({{ user.schedruser.school.title }})</p>
+<p><a href="/home">My Schedule</a> || <a href="/account/logout">Logout</a></p>
+{% else %}
+<form action="/account/login/" method="post">
+<table class="login">
+<tr><th>Username<br>or Email</th><td><input maxlength="75" name="name"></td></tr>
+<tr><th>Password</th><td><input type="password" name="password"></td></tr>
+<tr><th>&nbsp;</th><th><input type="submit" value="Login"></th></tr>
+</table>
+<a href="/account/register">Register for free</a>
+</form>
+{% endif %}
+</div>
+<a href="/"><img src="/static/img/schedr.png" border=0></a>
+</div>
+</div>
+<div id="info">
+<div class="container" style="padding:20px">
+<p>We believe that security, privacy, and peace of mind is very important.</p>
+<ol style="margin:0px;">
+<li><h3>Schedr only supports HTTPS connections.</h3><p>The connection between your computer and Schedr is encrypted.</li>
+<li><h3>Import feature is disabled.</h3><p>Schedr's import feature allowed users to import their current course schedule from their school's course registration system. While this was a cool feature, it required users to divulge their university username and password in order to work. We never stored this information and never had any incidents regarding data leaks or breaches, but it's not worth the liability, so the feature has been disabled.</p></li>
+<li><h3>Extra documentation added to registration form.</h3><p>Schedr isn't affiliated with any universities. Extra documentation was added to the registration page so students know that Schedr does not require students to register using their university credentials.</li>
+</ol>
+</div>
+</div>
+<div id="footer">
+<div class="container">
+<ul>
+<li><a href="/info/about">About</a></li>
+<li><a href="/info/press">Press</a></li>
+<li><a href="/info/contact">Contact</a></li>
+<li>&copy; Schedr.com 2007-2009</li>
+</ul>
+<ul>
+<li><a href="http://www.facebook.com/pages/Schedr/43331106562" target="_blank">Facebook</a></li>
+<li><a href="http://www.twitter.com/schedr" target="_blank">Twitter</a></li>
+</ul>
+<ul style="text-align:right">
+<!-- <li><a href="http://www.djangoproject.com/" target="_blank"><img src="http://media.djangoproject.com/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a></li>
+<li><a href="http://www.jquery.com/"><img src="http://drupal.org/files/images/jq.png" border="0"></a></li> -->
+</ul>
+</div>
+</div>
+</body>
+</html>

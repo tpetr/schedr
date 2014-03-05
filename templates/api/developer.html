@@ -1,0 +1,32 @@
+<html>
+<head>
+<title>Schedr API | {{ dev.title }}</title>
+<style>
+h1 {
+	text-align:center;
+}
+table.settings th {
+	text-align:right;
+}
+</style>
+</head>
+<body>
+<div style="width:750px;margin:auto">
+<div style="text-align:right; font-size:10px;">Logged in as {{ user.email }} | <a href="/account/logout">Logout</a></div>
+<h1>{{ dev.title }} ({{ user_count }} users)</h1>
+<fieldset>
+<legend>Settings</legend>
+<form action="" method="post">
+<table class="settings" width="100%">
+{{ form }}
+<tr><td>&nbsp;</td><td><input type="submit" value="Save"></td></tr>
+</table>
+</form>
+</fieldset>
+<br>
+<div style="font-size:22px; text-align:center">
+Secret key: <input type="text" style="font-size:22px" readonly size="40" value="{{ dev.secret_key }}"></div><br>
+<div style="text-align:center">Warning: Make sure to update your code if you reset your secret key!</span><form action="reset"><input type="submit" value="Reset Secret Key"</form></div>
+</div>
+</body>
+</html>

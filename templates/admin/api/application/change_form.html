@@ -1,0 +1,20 @@
+{% extends "admin/change_form.html" %}
+
+{% block pretitle %}
+{% if change %}
+<fieldset><legend>OAuth</legend>
+<table>
+<tr><th>Consumer key:</th><td><input type="text" readonly value="{{ original.consumer.key }}"></td></tr>
+<tr><th>Secret:</th><td><input type="text" readonly value="{{ original.consumer.secret }}"></td></tr>
+<tr><th>URLs:</th><td>http://www.schedr.com/oauth/*/</td></tr>
+</table>
+</fieldset>
+<fieldset><legend>Push</legend>
+<table>
+<tr><th>Secret:</th><td><input type="text" readonly value="{{ original.push_secret }}"></td></tr>
+<tr><th>Last push:</th><td>{{ original.last_push }}</td></tr>
+<tr><th>Test:</td><td><a href="/api/test_push?consumer_key={{ original.consumer.key }}" target="_blank">Execute</a></td></tr>
+</table>
+</fieldset>
+{% endif %}
+{% endblock %}

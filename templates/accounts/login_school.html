@@ -1,0 +1,37 @@
+{% extends "base.html" %}
+
+{% block title %} | Log in{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+table.login {
+	margin:150px 200px;
+	width:350px;
+}
+table.login td {
+	font-size:11pt;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<style>
+input#id_prefix {
+	width:120px;
+}
+</style>
+<div class="fancy">
+<form name="school_login" method="post" action="?next={{ next|default:"/" }}">
+<table class="form">
+<tr><th colspan=2><h1>Login</h1>{{ form.non_field_errors }}</th></tr>
+<tr><th>Email</th><td>{{ form.prefix }}@{{ school.email_suffix }}{{ form.prefix.errors }}</td></tr>
+<tr><th>Password</th><td>{{ form.password }}{{ form.password.errors }}</td></tr>
+<tr><td>&nbsp;</td><th><input type="submit" value="Log in" /></th></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td colspan="2" style="text-align:center">Don't have an account? <a href="/account/register/">Register</a> for free.</td></tr>
+<tr><td colspan="2" style="text-align:center">Forgot your password? <a href="/account/password/reset">Reset</a> it here.</td></tr>
+</table>
+</form>
+</div>
+{% endblock %}

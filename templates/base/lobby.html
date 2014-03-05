@@ -1,0 +1,52 @@
+{% extends "base.html" %}
+
+{% block title %} | {{ school.title }}{% endblock %}
+
+{% block breadcrumb %}
+{% if user.is_authenticated %}
+<h2 style="line-height:18px;">{{ school.title }}</h2>
+Logged in as {{ user.email }}{% else %}
+<h2 style="line-height:30px;">{{ school.title }}</h2>
+{% endif %}
+{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr_lobby.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div class="fancy" style="padding:15px; height:380px;">
+
+<div style="text-align:center;">
+<span style="font-size:18px">Click below to access your calendar:</span><br>
+<center>
+<table><tr>{% for term in terms %}<td style="text-align:center;padding:20px;">
+<a style="font-size:30px;text-decoration:none;color:#647d8f;" href="/{{ school.name }}/{{ term.name }}/">
+<!-- <img src="{{ term.image_url }}"><br> --><u>{{ term }}</u></a>
+</td>{% endfor %}</tr></table>
+</center>
+</div>
+<div style="float:left; width:360px; font-size:16px;">
+<div style="padding:10px 10px 0px 10px;">
+<h3 style="padding:2px;margin:0px;text-align:center">Events</h3>
+<ul class="calendar">
+{% for event in events %}
+<li><b>{{ event.longdate }}</b><br><div>{{ event.text }}</div></li>
+{% endfor %}
+{% block events_url %}{% endblock %}
+</ul>
+</div>
+</div>
+<div style="float:right; width:360px; font-size:16px;">
+<div style="padding:10px;">
+<h3 style="padding:2px; margin:0px; text-align:center;">Popular at {{ school.title }}</h3>
+<ol class="courses">
+{% for course in popular_courses %}
+<li><a href="{{ course.get_absolute_url }}" target="_blank" title="{{ course.title }}">{{ course }}</a> - {{ course.total }}</li>
+{% endfor %}
+</ol>
+</div>
+</div>
+</div>
+{% block leaderboard %}{% endblock %}
+{% endblock %}

@@ -1,0 +1,18 @@
+{% for school in schools %}
+<h2>{{ school.school.title }} ({{ school.school.user_count }} users)</h2>
+<ul>
+<li>Cache: {{ school.cache_time }}</li>
+<li>Parse: {{ school.parse_time }}</li>
+<li>Unknown locations:</li>
+<ul>
+{% if school.locations %}
+{% for loc in school.locations %}
+<li>&quot;{{ loc.0 }}&quot; ({{ loc.1 }})</li>
+{% endfor %}
+{% else %}
+<li>None</li>
+{% endif %}
+</ul>
+</ul>
+{% endfor %}
+Completed in {{ elapsed }}

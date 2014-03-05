@@ -1,0 +1,57 @@
+<html>
+<head>
+<title>Finalize</title>
+<style>
+body {
+	margin:0px;
+	padding:0px;
+	background:#647d8f;
+	color:white;
+}
+h1,h2 {
+	padding:0px;
+	margin:0px;
+}
+th {
+	text-align:center;
+}
+td {
+	text-align:right;
+	width:50%;
+}
+td.right {
+	text-align:left;
+}
+a {
+	color:white;
+}
+ol {
+	width:300px;
+	margin:auto;
+	text-align:left;
+}
+ol>li {
+	padding:5px 0px;
+}
+</style>
+</head>
+<body>
+<h2 style="text-align:center">{{ term }}</h2>
+<ol><li>Login to <a href="https://spire.umass.edu" target="_blank">SPIRE</a></li>
+<li>On the left, click Enrollment, and then click Add Classes</li>
+<li>Select {{ term }} and click Continue</li>
+<li>For each number below, copy and paste it into the "Enter Class Nbr" field</li>
+</ol>
+<table width="100%">
+{% for course, sections in courses.items %}
+<tr><th colspan=2>{{ course }}</th></tr>
+{% for section in sections %}
+<tr><td>{{ section.get_type_short }}: </td><td class="right"><input type="text" value="{{ section.school_id }}" size="5" readonly="1"></td></tr>
+{% endfor %}
+{% endfor %}
+</table>
+<div style="text-align:center;color:white;padding:10px 0px;">
+<a href="javascript:window.close()">Close</a>
+</div>
+</body>
+</html>

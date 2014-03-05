@@ -1,0 +1,8 @@
+{% extends "base/calendar.html" %}
+
+{% block majors %}
+schedr.majors = {{ json_majors }};
+schedr.course_symbol = '.';
+schedr.loc_symbol = '-';
+ {% endblock %}
+

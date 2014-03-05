@@ -1,0 +1,48 @@
+<html>
+<head>
+<title>Schedr</title>
+<link href="/static/css/schedr-api.css" rel="stylesheet" type="text/css"/>
+<link href="/static/css/schedr-colors.css" rel="stylesheet" type="text/css"/>
+{% if css %}<link href="{{ css }}" rel="stylesheet" type="text/css" />{% endif %}
+</head>
+<body>
+<div id="content">
+
+<div id="left">
+<div id="terms">{{ term }}</div>
+<ul id="sidebar"><li style="text-align:center" id="thinking"><img src="/static/img/thinking.gif"></li></ul>
+</div>
+
+<div id="main">
+<ul id="days"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li></ul>
+<div id="calendar">
+<div class="hour"><span>8</span>am</div>
+<div class="hour"><span>9</span>am</div>
+<div class="hour"><span>10</span>am</div>
+<div class="hour"><span>11</span>am</div>
+<div class="hour"><span>12</span>pm</div>
+<div class="hour"><span>1</span>pm</div>
+<div class="hour"><span>2</span>pm</div>
+<div class="hour"><span>3</span>pm</div>
+<div class="hour"><span>4</span>pm</div>
+<div class="hour"><span>5</span>pm</div>
+<div class="hour"><span>6</span>pm</div>
+<div class="hour"><span>7</span>pm</div>
+</div>
+
+</div>
+
+<div id="footer" style="font-size:10px">Powered by <a href="http://www.schedr.com">Schedr</a></div>
+
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script src="/static/js/schedr-api-static.js" type="text/javascript"></script>
+<script type="text/javascript">
+{% autoescape off %}
+	var c = schedr.calendar.create('calendar');
+	schedr.events.CalendarResizeHandler();
+	schedr.calendar.loadFromJSON({{ data }});
+	$('#thinking')[0].parentNode.removeChild($('#thinking')[0]);
+{% endautoescape %}
+</script>
+</body>
+</html>

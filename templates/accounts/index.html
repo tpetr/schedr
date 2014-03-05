@@ -1,0 +1,68 @@
+{% extends "base.html" %}
+
+{% block title %} | My Account{% endblock %}
+
+{% block buttons %}
+<li class="right"><a href="http://www.schedr.com/help"><img src="/static/img/help.png" alt="Help"><br>Help</a></li>
+<li class="right"><a href="http://www.schedr.com/{{ user.schedruser.school.name }}/" title="Back to Calendar"><img src="/static/img/back.png" alt="Calendar"><br>Calendar</a></li>
+{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<style>
+body {
+	overflow-y: scroll;
+}
+table.acct {
+	font-size:18px;
+	width:100%;
+}
+table.acct th {
+	text-align:right;
+	font-weight:normal;
+	width:33%;
+}
+table.acct td {
+	padding:30px 20px;
+	font-size:14px;
+	width:66%;
+}
+table.acct h3 {
+	padding:0px;
+	margin:0px;
+}
+div#message {
+	text-align:center;
+	font-size:18px;
+	color:green;
+	padding:10px;
+}
+</style>
+<div class="fancy">
+<div id="message"></div>
+<table class="acct" cellpadding=0 cellspacing=0>
+<tr><th>Email</th><td><h3>{{ user.email }}</h3></td></tr>
+<tr class="odd"><th>School</th><td><h3>{{ user.schedruser.school.title }}</h3></td></tr>
+<tr><th>Username</th><td><h3>{{ user.username }}</h3></td></tr>
+<tr><th>Full name</th><td><form action="" method="post"><input type="hidden" name="action" value="fullname">{{ fullname_form.fullname }} <input type="submit" value="Save">{{ fullname_form.fullname.errors }}</form></td></tr>
+<tr class="odd"><th>Password</th><td class="main"><form action="" method="post"><input type="hidden" name="action" value="password">
+&raquo; Old password<br>{{ password_form.old_password }}<br>{{ password_form.old_password.errors }}<br>
+&raquo; New password<br>{{ password_form.new_password1 }}<br>{{ password_form.new_password1.errors }}<br>
+&raquo; Confirm new password<br>{{ password_form.new_password2 }}<br>{{ password_form.new_password2.errors }}<br>
+<input type="submit" value="Change Password"></form></td></tr>
+
+</table>
+</div>
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<script src="/static/js/cookies.js"></script>
+<script>
+console.log(Cookie.get("schedr_acct_message"));
+if (Cookie.get("schedr_acct_message")) {
+	$("#message").html(Cookie.get("schedr_acct_message"));
+	setTimeout('$("#message").fadeOut("slow")', 5000);
+}
+</script>
+{% endblock %}

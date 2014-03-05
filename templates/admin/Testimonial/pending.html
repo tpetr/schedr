@@ -1,0 +1,11 @@
+{% extends "admin/base_site.html" %}
+
+{% block title %}List of pending testimonials{% endblock %}
+
+{% block content %}
+<div id="content-main">
+	<h1>List of pending testimonials:</h1>
+	{% for testimonial in testimonial_list %}
+	<h3>{{ testimonial.text }}</h3>
+	{% endfor %}
+</div>

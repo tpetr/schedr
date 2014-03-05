@@ -1,0 +1,71 @@
+{% extends "base.html" %}
+
+{% block title %} | {{ school.title }} | {{ course }}{% endblock %}
+
+{% block meta %}
+<meta name="keywords" content="college,courses,scheduling,{{ school.title }},{{ course.major.title }},{{course.title}}">
+{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-public.css" rel="stylesheet" type="text/css" />
+<link href="/static/css/schedr-colors.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block breadcrumb %}
+<b style="font-size:14px">{{ school.title }} - {{ term }}</b><br>{{ course }} - {{ course.title }}
+{% endblock %}
+
+{% block content %}
+{% if all_tba %}
+<h1 style="padding:100px 0px; text-align:center;">All sections for this course are marked as TBA.<br>Please check back later.</h1>
+{% else %}
+<div id="main">
+<ul id="days" class="thinking"><li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li></ul>
+<div id="calendar">
+	<div class="hour"><span>8</span>am</div>
+	<div class="hour"><span>9</span>am</div>
+	<div class="hour"><span>10</span>am</div>
+	<div class="hour"><span>11</span>am</div>
+	<div class="hour"><span>12</span>pm</div>
+	<div class="hour"><span>1</span>pm</div>
+	<div class="hour"><span>2</span>pm</div>
+	<div class="hour"><span>3</span>pm</div>
+	<div class="hour"><span>4</span>pm</div>
+	<div class="hour"><span>5</span>pm</div>
+	<div class="hour"><span>6</span>pm</div>
+	<div class="hour"><span>7</span>pm</div>
+</div>
+</div>
+{% if tba %}
+<hr>
+NOTE: There are currently sections for this class that are TBA:
+<ul>
+{% for s in tba %}
+<li>{{ s }}</li>
+{% endfor %}
+</ul>
+{% endif %}
+{% endif %}
+<div style="background:#647d8f; text-align:center;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5174361591369676";
+/* Schedr 2.0 Course Listing */
+google_ad_slot = "8486510557";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+</div>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.2.6/jquery.min.js"></script>
+<script src="/static/js/schedr-listing.js"></script>
+<script>
+{% autoescape off %}
+schedr.calendar.create('calendar');
+schedr.calendar.loadFromJSON({{ data }});
+$('#days').removeClass('thinking');
+{% endautoescape %}
+</script>
+{% endblock %}

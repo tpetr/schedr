@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+
+{% block title %} | Register{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+th {
+font-size:16px;
+padding-bottom:10px;
+}
+table.form td input {
+	font-size:16px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fancy">
+<form action="{% url registration_register %}" method="POST" autocomplete="off">
+<table class="form">
+<tr><th colspan="2" style="text-align:center"><h1 style="font-size:25px">Register</h1></th></tr>
+{{ form }}
+<tr><td>&nbsp;</td><th><input type="submit" value="Register" class="normal" /></td></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td colspan="2" style="text-align:center">Already registered? <a href="/account/login">Login</a></td></tr>
+</table>
+</form>
+</div>
+{% endblock %}

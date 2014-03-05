@@ -1,0 +1,121 @@
+{% extends "base.html" %}
+
+{% block title %} | {{ school_title }}{% endblock %}
+
+{% block rightside %}
+<!-- Beginning of meebo me widget code.
+Want to talk with visitors on your page?  
+Go to http://www.meebome.com/ and get your widget! -->
+<!-- <div style="padding-top:40px;text-align:center;">
+<embed src="http://widget.meebo.com/mm.swf?CtiEUUOpPB" type="application/x-shockwave-flash" width="200" height="275"></embed>
+If we're offline, please leave your name and/or email address.<br>
+Or feel free to email us directly:<br>
+<a href="mailto:helpdesk@schedr.com">helpdesk@schedr.com</a>
+</div> -->
+{% endblock %}
+
+{% block content %}
+		<div id="left">
+			<div id="terms">
+{% block term %}
+<select id="termsel" onchange='window.location.href="../"+$("#termsel")[0].value+"/"'>
+{% for term in terms %}
+<option value="{{ term.name }}"{% if term.current %} selected{%endif %}>{{ term }}</option>
+{% endfor %}
+</select>
+{% endblock %}
+</div>
+			<ul id="sidebar"><li style="text-align:center" id="thinking"><img src="/static/img/thinking.gif"></li></ul>
+			{% block add_course %}{% endblock %}
+		</div>
+		<div id="main">
+			<ul id="days">{% block days %}<li>Mon</li><li>Tue</li><li>Wed</li><li>Thu</li><li>Fri</li>{% endblock %}</ul>
+			<div id="calendar">
+				<div class="hour"><span>8</span>am</div>
+				<div class="hour"><span>9</span>am</div>
+				<div class="hour"><span>10</span>am</div>
+				<div class="hour"><span>11</span>am</div>
+				<div class="hour"><span>12</span>pm</div>
+				<div class="hour"><span>1</span>pm</div>
+				<div class="hour"><span>2</span>pm</div>
+				<div class="hour"><span>3</span>pm</div>
+				<div class="hour"><span>4</span>pm</div>
+				<div class="hour"><span>5</span>pm</div>
+				<div class="hour"><span>6</span>pm</div>
+				<div class="hour"><span>7</span>pm</div>
+			</div>
+		</div>
+<script type="text/javascript">
+  var uservoiceJsHost = ("https:" == document.location.protocol) ? "https://uservoice.com" : "http://cdn.uservoice.com";
+  document.write(unescape("%3Cscript src='" + uservoiceJsHost + "/javascripts/widgets/tab.js' type='text/javascript'%3E%3C/script%3E"))
+</script>
+<script type="text/javascript">
+UserVoice.Tab.show({ 
+  /* required */
+  key: 'schedr',
+  host: 'schedr.uservoice.com', 
+  forum: '15219', 
+  /* optional */
+  alignment: 'left',
+  background_color:'#f00', 
+  text_color: 'white',
+  hover_color: '#06C',
+  lang: 'en'
+})
+</script>
+{% endblock %}
+
+{% block search %}
+<div id="blank" style="display:none"><p>Message!!</p></div>
+<div id="add_course" style="display:none">
+
+<div>Major: <select id="search_major" onchange="schedr.search.update()"><option value="">(all)</option>{% for major in majors %}<option value="{{ major.id }}">{{ major.name }} - {{ major.title }}</option>{% endfor %}</select> Course Number: <input id="search_course" size=4 maxlength=4 onkeyup="schedr.search.update()"></div>
+<div>
+{% if geneds %}
+{% block geneds %}
+<div style="float:right;padding:2px;">
+<b>Geneds:</b><br>
+<input type="checkbox" name="AL" class="gened" onchange="schedr.search.update()"> AL<br>
+<input type="checkbox" name="AT" class="gened" onchange="schedr.search.update()"> AT<br>
+<input type="checkbox" name="BS" class="gened" onchange="schedr.search.update()"> BS<br>
+<input type="checkbox" name="CW" class="gened" onchange="schedr.search.update()"> CW<br>
+<input type="checkbox" name="HS" class="gened" onchange="schedr.search.update()"> HS<br>
+<input type="checkbox" name="PS" class="gened" onchange="schedr.search.update()"> PS<br>
+<input type="checkbox" name="R1" class="gened" onchange="schedr.search.update()"> R1<br>
+<input type="checkbox" name="R2" class="gened" onchange="schedr.search.update()"> R2<br>
+<input type="checkbox" name="SB" class="gened" onchange="schedr.search.update()"> SB<br>
+<input type="checkbox" name="SI" class="gened" onchange="schedr.search.update()"> SI<br>
+<input type="checkbox" name="G" class="gened" onchange="schedr.search.update()"> G<br>
+<input type="checkbox" name="U" class="gened" onchange="schedr.search.update()"> U<br>
+<input type="checkbox" name="I" class="gened" onchange="schedr.search.update()"> I<br>
+</div>
+{% endblock %}
+{% endif %}
+<table class="search" cellspacing=0 cellpadding=0>
+<thead><tr><th width=130>Course</th><th>Title</th>{% if geneds %}<th style="width:30px">&nbsp;</th>{% endif %}<th style="width:20px">Cr</th><th class="last">&nbsp;</th></tr></thead>
+<tbody id="search_table" style="max-height:248px;"></tbody>
+</table>
+</div>
+</div>
+<div id="multi_section" style="display:none">
+<table style="width:100%">
+<thead>
+<tr><th>Section</th><th>Location</th><th>Instructor(s)</th></tr>
+</thead>
+<tbody id="multi_section_table">
+
+</tbody>
+</table>
+</div>
+{% endblock %}
+
+{% block script %}
+{% ifequal user.email "test@student.umass.edu" %}
+{% include "include/scripts_dev.html" %}
+{% else %}
+{% include "include/scripts.html" %}
+{% endifequal %}
+{% if trident %}
+{% include "include/ie_warning.html" %}
+{% endif %}
+{% endblock %}

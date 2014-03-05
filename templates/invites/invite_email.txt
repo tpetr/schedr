@@ -1,0 +1,10 @@
+Hey {{ invite_name }},
+
+Your friend {{ name }} thinks that you'd like Schedr.
+
+What is Schedr? It's a visual way to pick out your classes for school. {% if share %}You can check out {{ name }}'s schedule <a href="{{ share }}">here</a>.{% endif %}
+
+Check it out at http://www.schedr.com/
+
+Thanks,
+Your pals at Schedr

@@ -1,0 +1,221 @@
+{% extends "base.html" %}
+
+{% block title %} | Register{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+h1 {
+	text-align:center;
+	padding:20px;
+	font-size:30px;
+}
+h2 {
+	text-align:center;
+}
+table {
+	margin:auto;
+}
+table th {
+	text-align:right;
+	padding:15px 5px;
+	font-size:14px;
+	width:180px;
+}
+table td.info {
+	width:180px;
+	padding:5px;
+	font-size:14px;
+}
+table td input {
+	font-size:16px;
+}
+span.pass {
+	background:url(http://schedr.com/media/img/admin/icon-yes.gif) no-repeat left center;
+	padding-left:15px;
+	color:green;
+}
+span.fail {
+	background:url(http://schedr.com/media/img/admin/icon-no.gif) no-repeat left center;
+	padding-left:15px;
+	color:red;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<style>ol>li>b { font-weight: bolder; }</style>
+<div class="fancy">
+<h1>Register</h1>
+<h2>R E M E M B E R:</h2>
+<ol style="width:550px; margin:auto;font-size:20px;">
+<li>Schedr is not affiliated with your university.</li>
+<li>If Schedr is down, your school will not help you. <a href="mailto:helpdesk@schedr.com">Email us.</a></li>
+<li>Do not use your university password(s) to register.</li>
+<li>In fact, never give out any of your passwords to anyone!</li>
+<li>Pick a good password. <a href="http://wolfram.org/writing/howto/password.html" target="_blank">Here's some tips.</a></li>
+<li>Schedr does not replace your school's registration system.</li>
+</ol>
+<br><br>
+<h2>Not scared away? Good!</h2>
+<form action="{% url registration_register %}" method="post" autocomplete="off">
+<table>
+<tr><th>Your name:</th><td>{{ form.full_name }}</td><td class="info"><small>(optional)</small></td></tr>
+<tr><th>Graduation year:</th><td><select name="graduation_year" style="width:100%"><option value=""></option><option value="2011">2011</option><option value="2012">2012</option><option value="2013">2013</option><option value="2014">2014</option><option value="0">Other (faculty / non-student)</option></select></td><td class="info"><small>(optional)</small><span id="graduation_year_info" {% if form.graduation_year.errors %}class="fail"{% endif %}>{% for error in form.graduation_year.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Username:</th><td>{{ form.username }}</td><td class="info"><span id="username_info" {% if form.username.errors %}class="fail"{% endif %}>{% for error in form.username.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Email:</th><td>{{ form.email }}</td><td class="info"><span id="email_info" {% if form.email.errors %}class="fail"{% endif %}>{% for error in form.email.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Password:</th><td>{{ form.password1 }}</td><td class="info"><span id="password1_info" {% if form.password1.errors %}class="fail"{% endif %}>{% for error in form.password1.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Repeat Password:</th><td>{{ form.password2 }}</td><td class="info"><span id="password2_info" {% if form.password2.errors %}class="fail"{% endif %}>{% for error in form.password2.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>&nbsp;</th><td style="text-align:center"><input type="submit" value="Register"/></td><td class="info">&nbsp;</td></tr>
+</table>
+
+</form>
+<br>
+<h2>Already registered? <a href="/account/login/">Login</a></h2>
+<br>
+</div>
+
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<script>
+String.prototype.endsWith = function(str) {
+	return (this.match(str+"$")==str);
+}
+
+var schools = { {% autoescape off %} {{ school_json }} {% endautoescape %} };
+
+$("#id_username").blur(function (event) {
+	if (event.target.old_value == event.target.value) {
+		return;
+	}
+	event.target.old_value = event.target.value;
+
+	var info = $('#username_info')[0];
+
+	if (event.target.value == '') {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+		return;
+	}
+
+	re = /^[a-zA-Z0-9_]+$/;
+	if (!re.test(event.target.value)) {
+		info.className = 'fail';
+		info.innerHTML = 'Only letters, numbers, or underscores';
+		return;
+	}
+
+	info.className = 'thinking';
+	info.innerHTML = 'Checking...';
+
+	$.ajax({url: '/account/username_avail', data: {username: $('#id_username')[0].value}, complete: function (resp) {
+		if (resp.responseText == '1') {
+			info.className = 'pass';
+			info.innerHTML = 'OK';
+		} else {
+			info.className = 'fail';
+			info.innerHTML = 'Already taken'
+		}
+	}});
+});
+
+$('#id_email').blur(function (event) {
+	if (event.target.old_value == event.target.value) {
+		return;
+	}
+	event.target.old_value = event.target.value;
+
+	var info = $('#email_info')[0];
+
+	if (event.target.value == '') {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+		return;
+	}
+
+	if (!event.target.value.endsWith('.edu')) {
+		info.className = 'fail';
+		info.innerHTML = 'School emails only';
+		return;
+	}
+
+	if (event.target.value.endsWith('@umass.edu')) {
+		info.className = 'fail';
+		info.innerHTML = 'Did you mean @student.umass.edu?';
+		return;
+	}
+
+	for (var suffix in schools) {
+		if (event.target.value.endsWith(suffix)) {
+			info.className = 'pass';
+			info.innerHTML = schools[suffix];
+			$.ajax({url: '/account/email_avail', data:{email: $('#id_email')[0].value}, complete: function (resp) {
+				if (resp.responseText == '0') {
+					info.className = 'fail';
+					info.innerHTML = 'In use';
+				}
+			}});
+			return;
+		}
+	}
+	info.className = 'fail';
+	info.innerHTML = 'School not supported yet';
+});
+
+$('#id_password1').blur(function (event) {
+	if (event.target.old_value == event.target.value) {
+		return;
+	}
+	event.target.old_value = event.target.value;
+
+	var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+	var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+	var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+
+	var pwd = event.target;
+	var info = $('#password1_info')[0];
+
+	if (pwd.value.length==0) {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+	} else if (false == enoughRegex.test(pwd.value)) {
+		info.className = 'fail';
+		info.innerHTML = 'Needs to be longer';
+	} else if (strongRegex.test(pwd.value)) {
+		info.className = 'pass';
+		info.innerHTML = 'Strong';
+	} else if (mediumRegex.test(pwd.value)) {
+		info.className = 'pass';
+		info.innerHTML = 'OK';
+	} else {
+		info.className = 'fail';
+		info.innerHTML = 'Weak';
+	}
+});
+
+$('#id_password2').blur(function (event) {
+	if (event.target.old_value == event.target.value) {
+		return;
+	}
+	event.target.old_value = event.target.value;
+
+	var p1 = $('#id_password1')[0].value
+	var info = $('#password2_info')[0];
+	if (event.target.value == '') {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+		return;
+	}
+		
+	if (event.target.value == p1) {
+		info.className = 'pass';
+		info.innerHTML = 'OK';
+	} else {
+		info.className = 'fail';
+		info.innerHTML = 'Passwords don\'t match';
+	}
+});
+		
+
+</script>
+{% endblock %}
+

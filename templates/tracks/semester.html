@@ -1,0 +1,36 @@
+{% extends "base/base.html" %}
+
+{% block title %} | Suggested track for {{ mt.title }}{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block breadcrumb %}<span><b style="font-size:12px; line-height:30px;">{{ user.email }}</b></span>{% endblock %}
+
+{% block buttons %}
+<li class="right"><a href="http://www.schedr.com/help"><img src="/static/img/help.png" alt="Help"><br>Help</a></li>
+<li class="right"><a href="/{{ school.name }}/{{ term.name }}/" title="Back to calendar"><img src="/static/img/back.png"><br>Calendar</a></li>
+{% if user.is_staff %}
+<li class="right"><a href="http://www.schedr.com/admin"><img src="/static/img/admin.png"><br>Admin</a></li>
+{% endif %}
+{% endblock %}
+
+
+{% block content %}
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<h2 style="text-align:center">Suggested track for {{ mt.title }}</h2>
+<style>
+table.track tr.years th { width:25% }
+table.track tr.semesters th { width:12% }
+</style>
+<table style="width:100%" class="track">
+<thead>
+<tr class="years"><th colspan="2">Freshman</th><th colspan="2">Sophomore</th><th colspan="2">Junior</th><th colspan="2">Senior</th></tr>
+<tr class="semesters"><th>Fall</th><th>Spring</th><th>Fall</th><th>Spring</th><th>Fall</th><th>Spring</th><th>Fall</th><th>Spring</th></tr>
+</thead>
+<tbody>
+{% block table %}{% endblock %}
+</tbody>
+</table>
+{% endblock %}

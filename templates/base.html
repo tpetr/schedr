@@ -1,0 +1,55 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.01//EN" "http://www.w3.org/TR/html4/strict.dtd">
+{% block meta %}{% endblock %}
+<html>
+<head>
+<title>Schedr{% block title %}{% endblock %}</title>
+<link rel="shortcut icon" href="/static/img/favicon.ico">
+{% block head %}
+<link href="/static/css/schedr.css" rel="stylesheet" type="text/css">
+<!--[if IE]> <link href="/static/css/schedr_ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+{% endblock %}
+{% block header %}{% endblock %}
+</head>
+<body>
+<div id="container">
+<div style="float:right;width:200px;">
+{% block rightside %}{% endblock %}
+</div>
+<div class="inner" style="width:750px;margin-left:200px;">
+	<div id="header">
+		<a class="logo" href="https://www.schedr.com{% block logo_link %}/{% endblock %}"><img src="/static/img/logo_small.png" class="logo" alt="Schedr"></a>
+		<div style="float:left; height:34px; padding:3px">
+{% block breadcrumb %}{% if user.is_authenticated %}<span style="line-height:30px">Logged in as {{ user.email }}</span>{% endif %}{% endblock %}
+		</div>
+		<ul>
+			{% if user.is_authenticated %}
+			<li class="right"><a href="/account/logout"><img src="/static/img/logout.png" alt="Logout"><br>Logout</a></li>
+			<li class="right"><a href="/account"><img src="/static/img/account.png"><br>Account</a></li>
+			{% else %}
+			<li class="right"><a href="/{% if school %}{{ school.name }}{% else %}account{% endif %}/login{% if next %}?next={{ next }}{% endif %}"><img src="/static/img/login.png" alt="Login"><br>Login</a></li>
+			{% endif %}
+			{% block buttons %}{% endblock %}
+		</ul>
+	</div>
+	<div id="content">
+{% block content %}{% endblock %}
+	</div>
+	<div id="footer">(c) 2007-2010, schedr.com &raquo; <a href="mailto:helpdesk{% if school %}+{{ school.name }}{% endif %}@schedr.com">Get Help</a> &raquo; <a href="http://www.facebook.com/schedr" target="_blank">Become a Fan</a>{% block footer_text %}{% endblock %}
+</div>
+</div>
+</div>
+{% block search %}{% endblock %}
+{% block script %}{% endblock %}
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-2869175-12']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
+</body>
+</html>

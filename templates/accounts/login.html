@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block title %} | Log in{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+{% block content %}
+<div class="fancy">
+<form name="master_login" method="post" action="?next={{ next|default:"/home" }}">
+<table class="form">
+<tr><th colspan=2><h1>Login</h1></th></tr>
+{{ form }}
+<tr><td>&nbsp;</td><th><input type="submit" value="Log in" /></th></tr>
+<tr><td>&nbsp;</td><td>&nbsp;</td></tr>
+<tr><td colspan="2" style="text-align:center">Don't have an account? <a href="/account/register/">Register</a> for free.</td></tr>
+<tr><td colspan="2" style="text-align:center">Forgot your password? <a href="/account/password/reset">Reset</a> it here.</td></tr>
+<tr><td colspan="2" style="text-align:center">Didn't get an activation email? <a href="/account/activate/resend/">Resend</a> it here.</td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td colspan="2" style="text-align:center">Like Schedr? <a href="http://www.facebook.com/pages/Schedr/43331106562" target="_blank">Become a fan</a>.</td></tr>
+</table>
+</form>
+</div>
+{% endblock %}

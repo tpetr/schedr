@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} | Logged Out{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+table.register {
+	margin:auto;
+	padding:150px 0px;
+	width:350px;
+}
+table.register td {
+	font-size:11pt;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fancy">
+<table class="register">
+<tr><td colspan="2" style="text-align:center"><h2>You've been logged out</h2></td></tr>
+<tr><td colspan="2" style="text-align:center">Thanks for stopping by!<br><br><a href="/">&laquo; Home</a> | <a href="/account/login">Login &raquo;</a></td></tr>
+</table>
+</div>
+{% endblock %}

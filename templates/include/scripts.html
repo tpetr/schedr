@@ -1,0 +1,26 @@
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<script src="/static/js/thickbox-compressed.js"></script>
+<script src="/static/js/schedr_2009-11-14.js"></script>
+<script type="text/javascript">
+	{% autoescape off %}
+	{% if geneds %}
+	schedr.geneds = {{ geneds }};
+	{% else %}
+	schedr.geneds = [];
+	{% endif %}
+	var c = schedr.calendar.create('calendar');
+	schedr.events.CalendarResizeHandler();
+	var message = Cookie.get("schedr_message");
+        if (message) {
+		$('#blank').html('<p class="message">' + message + '<br><br><input id="btnOK" type="button" value="OK" onclick="tb_remove()"></p>');
+		$(document).ready(function() {
+		tb_show('', '#TB_inline?height=80&width=350&inlineId=blank&modal=true', false);
+		$('#btnOK')[0].focus();
+		});
+	}
+	Cookie.erase("schedr_message");
+	{% if data %}schedr.calendar.loadFromJSON({{ data }});{% endif %}
+	$('#thinking')[0].parentNode.removeChild($('#thinking')[0]);
+	$(document).ready(schedr.search.update);
+	{% endautoescape %}
+</script>

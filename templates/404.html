@@ -1,0 +1,49 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+
+div.bubble {
+	padding:30px;
+}
+div.bubble>b {
+	display:block;
+	height:1px;
+	background:white;
+}
+div.bubble>b.t1 { margin:0px 1px;  height:2px; }
+div.bubble>b.t2 { margin:0px 2px; }
+div.bubble>b.t3 { margin:0px 3px; }
+div.bubble>b.t4 { margin:0px 5px; }
+div.bubble>div {
+	background:white;
+	color:black;
+	font-size:14px;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div style="text-align:center" class="fancy">
+<div style="padding:30px;">
+<h1>Oops, that page does not exist!</h1>
+<a href="/"><h1>Click here to go home</h1></a>
+</div>
+<div style="background:url(/static/img/404.jpg);width:500px;height:375px;margin:auto;">
+<div class="bubble">
+<b class="t4"></b>
+<b class="t3"></b>
+<b class="t2"></b>
+<b class="t1"></b>
+<div>
+I can has http://www.schedr.com{{ request_path }}?
+</div>
+<b class="t1"></b>
+<b class="t2"></b>
+<b class="t3"></b>
+<b class="t4"></b>
+<img src="/static/img/arrow.png">
+</div>
+</div>
+{% endblock %}

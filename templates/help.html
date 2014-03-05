@@ -1,0 +1,83 @@
+{% extends "base.html" %}
+
+{% block title %} | Info{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr_lobby.css" rel="stylesheet" type="text/css">
+<!--[if IE]> <link href="/static/css/schedr_ie.css" rel="stylesheet" type="text/css"> <![endif]-->
+{% endblock %}
+
+{% block content %}
+<div class="fancy" style="font-size:14px; padding: 10px 20px;">
+<h1>Schedr Help</h1>
+<h2>This is really weak, sorry! We'll get around to improving this soon!</h2>
+<ul>
+<li><a href="#idea">General Idea</a></li>
+<li><a href="#add">Adding/Removing classes</a></li>
+<li><a href="#choose">Choosing sections</a></li>
+<li><a href="#import">Importing data</a></li>
+<li><a href="#sharing">Sharing data</a></li>
+<li>Schedr Interface</li>
+<ul>
+	<li><a href="#sidebar">Sidebar</a></li>
+	<li><a href="#toolbar">Toolbar</a></li>
+	<li><a href="#add_dialog">Add Course dialog</a></li>
+	<li><a href="#import_dialog">Import dialog</a></li>
+</ul>
+</ul>
+<a name="idea"></a>
+<h2>General Idea</h2>
+<p>
+Schedr is a web application that lets you visually plan and view your course schedule. Once your data is loaded, you can share your schedule with friends (public link), computer programs such as Outlook (export), or keep a hardcopy of it for when your offline (print).
+</p>
+<a name="add"></a>
+<h2>Adding/Removing classes</h2>
+<p>
+Adding a course to your schedule is easy. All you have to do is click the "Add Course" button. This brings up the Add Course dialog, which allows you to search for courses. The controls at the top of the dialog allow you to filter by major name and course number, as well as specific education requirements (if your school offers them). Once you've found a course you want to take, you simply click the "Add" link next to it.
+</p>
+<p>Once you're done adding classes (don't worry, you can always add more later), press the Esc key or click "close". You should see the sidebar populated with the courses you selected, and some time blocks on the calendar.
+</p>
+<p>If you've decided that you don't actually want one of the classes you've selected, you can remove it by moving your mouse over to it's sidebar element, and clicking the red circle that appears. A confirmation will pop up to make sure you don't delete the wrong class.
+</p>
+<a name="chooose"></a>
+<h2>Choosing sections</h2>
+<p>Now that you've picked some classes, you need to choose which sections you want to sign up for. Each class that you selected will add time blocks onto the calendar. They're color-coded for readability, with each course getting its own color. If you see a time block that looks like this:<br>img<br>It means that there is only one section for that class (which is what you're seeing right now). However, if a time block looks like this:<br>img<br>It means that there's more than one section to choose from. To pick between the other possible sections, simply move your mouse over the time block (your cursor should change) and hold down the left mouse button. Some new translucent time blocks should appear -- those are the other sections available for that class. To pick a different one, move your mouse over to the time block you want, and then release the left mouse button.</p>
+<a name="import"></a>
+<h2>Importing data</h2>
+<p>If you want to use Schedr to keep track of what courses you're currently taking, manually adding your courses can be a pain. If your school supports Schedr Imports (indicated by whether or not the Import button is visible on the toolbar), you can use that to automatically load your current course schedule from your school. You'll have to input your school user id and password, but don't worry, we don't save that data.
+</p>
+<a name="sharing"></a>
+<h2>Sharing data</h2>
+<p>Now that you have your schedule all squared away, you may want to share or export this data. This is easy to do! There are three ways that you can share or export your schedule:
+<ul>
+<li><h3>Public link</h3>Clicking on the Share link on the toolbar links you to your public schedule page. If you want to let your friends see your schedule, simply send them that link.</li>
+<li><h3>iCalendar export</h3>Clicking on the Export link on the toolbar links you to an iCalendar representation of your schedule. You can use this to load your schedule into calendaring programs such as Outlook, Thunderbird, iCal, Google Calendar, and more</li>
+<li><h3>PDF export</h3>Clicking on the Print link on the toolbar links you to a PDF representation of your schedule. This allows you to print out a hardcopy of your schedule. You can also send this file to your friends, if you don't want to give out your public schedule link.</li>
+</ul>
+<h2>Schedr interface</h2>
+<p>What follows is a quick rundown of Schedr's interfaces and dialogs:</p>
+<ul>
+<a name="sidebar"></a>
+<li><h3>Sidebar</h3>The sidebar is a list on the left side of the screen that displays additional information regarding which classes you've selected. It displays the course name and title, with a link to a course's public listing. The collapsers next to each section type can be expanded to reveal the instructors teaching the section, and the location of the section. Clicking on the location links to the location's public listing.</li>
+<a name="toolbar"></a>
+<li><h3>Toolbar</h3>The toolbar is a group of buttons on the top of the screen that allows you to perform special actions.<br>img<br>Import allows you to import your current schedule, Share gives you your public calendar link, Export gives you your schedule's iCalendar file, Print gives you a PDF version of your schedule, Account lets you edit your account settings, and Logout logs you out of Schedr.</li>
+<a name="add_dialog"></a>
+<li><h3>Add Course dialog</h3>The add course dialog allows you to search for courses to add.<br>img<br>The "Major" dropdown list allows you to filter by major name, and the "Course Number" textbox allows you to filter by course number. Your school may also have an array of checkboxes, which allow you to filter by specific education requirements.</li>
+<a name="import_dialog"></a>
+<li><h3>Import dialog</h3>The import dialog allows you to input your school login information so that it can get your current schedule.<br>img<br>Your school may not be importable yet, so this option isnt available for everyone.</li>
+</ul>
+</div>
+<div style="background:#647d8f; text-align:center;">
+<script type="text/javascript"><!--
+google_ad_client = "pub-5174361591369676";
+/* Schedr 2.0 Main Lobby */
+google_ad_slot = "6817731411";
+google_ad_width = 728;
+google_ad_height = 90;
+//-->
+</script>
+<script type="text/javascript"
+src="http://pagead2.googlesyndication.com/pagead/show_ads.js">
+</script>
+</div>
+{% endblock %}

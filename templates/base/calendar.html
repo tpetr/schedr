@@ -1,0 +1,29 @@
+{% extends "base/base.html" %}
+
+{% block meta %}
+<meta http-equiv="X-UA-Compatible" content="chrome=1">
+{% endblock %}
+
+{% block title %} | {{ school.title }} | {{ term }}{% endblock %}
+
+{% block head %}
+{% include "include/css.html" %}
+{% endblock %}
+
+{% block breadcrumb %}<span><b style="font-size:12px; line-height:20px;">{% if user.is_authenticated %}{{ user.email }}{% else %}Guest User{% endif %}</b><br><span id="save_status">Saved</span></span>{% endblock %}
+{% block buttons %}
+{% if term.finals_visible %}
+<li class="right"><a href="/{{ school.name }}/{{ user.schedruser.code }}{{ term.id }}/pdf-exams"><img src="/static/img/feedback.png" alt="Exams"><br>Exams</a></li>
+{% endif %}
+<li class="right"><a href="/{{ school.name }}/{{ user.schedruser.code }}{{ term.id }}/pdf"><img src="/static/img/print.png" alt="Print"><br>Print</a></li>
+<li class="right"><a href="/{{ school.name }}/{{ user.schedruser.code }}{{ term.id }}/" target="_blank"><img src="/static/img/ical.png" alt="Share"><br>Share</a></li>
+{% if user.is_staff %}
+<li class="right"><a href="/admin"><img src="/static/img/admin.png"><br>Admin</a></li>
+{% endif %}
+<li class="right"><a href="/{{ school.name }}/{{ term.name }}/register" title="Register for classes"><img src="/static/img/register.png"><br>Register</a></li>
+{% endblock %}
+
+{% block add_course %}
+<div id="addcourse" style="color:white;"><table style="padding:0px 12px" width="100%"><tr><td width="75"><span id="credits" style="font-size:20px">0</span><br>credits</td><td width="100"><input style="width:100px" alt="#TB_inline?height=300&width=600&inlineId=add_course" class="thickbox" type="button" value="Add Course" title="Add Course"></td></tr></table>
+</div>
+{% endblock %}

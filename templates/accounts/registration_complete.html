@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block title %} | Registration Complete{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+table.register {
+	margin:150px auto;
+}
+table.register td {
+	font-size:11pt;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fancy">
+<table class="register">
+<tr><td colspan="2" style="text-align:center"><h2>Registration Complete!</h2></td></tr>
+<tr><td colspan="2" style="text-align:center">Please check your email to activate your account</td></tr>
+<tr><td colspan="2">&nbsp;</td></tr>
+<tr><td colspan="2" style="text-align:center">Why not become a <a href="http://www.facebook.com/pages/Schedr/43331106562" target="_blank">Fan of Schedr</a> in the meantime?</td></tr>
+</table>
+</div>
+{% endblock %}

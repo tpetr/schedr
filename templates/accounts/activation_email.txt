@@ -1,0 +1,7 @@
+{% if user.first_name %}Hey {{ user.first_name }},{% else %}Hi there,{% endif %}<br>
+<br>
+Welcome to Schedr! You have {{ expiration_days }} days to activate your account. To activate, follow this link:<br>
+<a href="http://www.schedr.com{% url registration_activate activation_key %}">http://www.schedr.com{% url registration_activate activation_key %}</a><br>
+<br>
+Thanks,<br>
+Your friends at <a href="http://www.schedr.com/">Schedr</a>

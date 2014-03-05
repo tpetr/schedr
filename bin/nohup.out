@@ -1,0 +1,554 @@
+/home/tpetr/schedr/umass/importer.py:4: DeprecationWarning: the sets module is deprecated
+  from sets import Set
+/home/tpetr/schedr/accounts/models.py:4: DeprecationWarning: the sha module is deprecated; use the hashlib module instead
+  import sha
+Term: Spring 2011
+Skipping ACCOUNTG H01
+Skipping ACCOUNTG H02
+Skipping ACCOUNTG H03
+Skipping ACCOUNTG H06
+Skipping ACCOUNTG 196H
+Skipping ACCOUNTG 221
+Skipping ACCOUNTG 222
+ACCOUNTG 296H
+ACCOUNTG 311
+ACCOUNTG 312
+ACCOUNTG 321
+ACCOUNTG 322
+ACCOUNTG 331
+ACCOUNTG 371
+ACCOUNTG 396
+ACCOUNTG 396H
+ACCOUNTG 398
+ACCOUNTG 398A
+ACCOUNTG 398V
+ACCOUNTG 496
+ACCOUNTG 496H
+ACCOUNTG 498S
+ACCOUNTG 498Y
+ACCOUNTG 499P
+ACCOUNTG 499T
+ACCOUNTG 499Y
+AEROSPAC 112
+AEROSPAC 191A
+AEROSPAC 224
+AEROSPAC 336
+AEROSPAC 398
+AEROSPAC 442
+AEROSPAC 496
+AFROAM 101
+AFROAM 118
+AFROAM 133
+AFROAM 156
+AFROAM 196
+AFROAM 196H
+AFROAM 197B
+AFROAM 222
+AFROAM 234
+AFROAM 238
+AFROAM 252H
+AFROAM 257
+AFROAM 296
+AFROAM 296H
+AFROAM 297G
+AFROAM 361
+AFROAM 365
+AFROAM 391A
+AFROAM 396
+AFROAM 396H
+AFROAM 398
+AFROAM 491C
+AFROAM 496
+AFROAM 496Y
+AFROAM 498Y
+AFROAM 499P
+AFROAM 499T
+AFROAM 499Y
+AFROAM 604
+AFROAM 691K
+AFROAM 691L
+AFROAM 691N
+AFROAM 696
+AFROAM 696A
+AFROAM 702
+AFROAM 791C
+AFROAM 899
+No courses
+ANIMLSCI H01
+ANIMLSCI H03
+ANIMLSCI H06
+ANIMLSCI 103
+ANIMLSCI 141
+ANIMLSCI 150
+ANIMLSCI 151
+ANIMLSCI 152
+ANIMLSCI 153
+ANIMLSCI 154
+ANIMLSCI 155
+ANIMLSCI 196
+ANIMLSCI 196H
+ANIMLSCI 198Y
+ANIMLSCI 200
+ANIMLSCI 241
+ANIMLSCI 247
+ANIMLSCI 296
+ANIMLSCI 296H
+ANIMLSCI 297B
+ANIMLSCI 297E
+ANIMLSCI 297L
+ANIMLSCI 297M
+ANIMLSCI 297P
+ANIMLSCI 297S
+ANIMLSCI 298
+ANIMLSCI 332
+ANIMLSCI 372
+ANIMLSCI 385
+ANIMLSCI 390B
+ANIMLSCI 392A
+ANIMLSCI 396
+ANIMLSCI 396H
+ANIMLSCI 397A
+ANIMLSCI 397B
+ANIMLSCI 397F
+ANIMLSCI 397I
+ANIMLSCI 397J
+ANIMLSCI 398
+ANIMLSCI 442
+ANIMLSCI 445
+ANIMLSCI 452
+ANIMLSCI 455
+ANIMLSCI 472
+ANIMLSCI 496
+ANIMLSCI 496H
+ANIMLSCI 497A
+ANIMLSCI 497L
+ANIMLSCI 498
+ANIMLSCI 498Y
+ANIMLSCI 499P
+ANIMLSCI 499T
+ANIMLSCI 499Y
+ANIMLSCI 596
+ANIMLSCI 672
+ANIMLSCI 696
+ANIMLSCI 697G
+ANIMLSCI 697I
+ANIMLSCI 699
+ANIMLSCI 792
+ANIMLSCI 794A
+ANIMLSCI 795A
+ANIMLSCI 796
+ANIMLSCI 899
+ANTHRO 102
+ANTHRO 103
+ANTHRO 103H
+ANTHRO 104
+ANTHRO 106
+ANTHRO 196H
+ANTHRO 205
+ANTHRO 281
+ANTHRO 296
+ANTHRO 296H
+ANTHRO 297LR
+ANTHRO 297OC
+ANTHRO 297VC
+ANTHRO 298
+ANTHRO 312
+ANTHRO 317
+ANTHRO 360
+ANTHRO 364
+ANTHRO 370
+ANTHRO 389
+ANTHRO 396
+ANTHRO 396C
+ANTHRO 396H
+ANTHRO 396J
+ANTHRO 396W
+ANTHRO 397AA
+ANTHRO 397AT
+ANTHRO 397EP
+ANTHRO 397H
+ANTHRO 397L
+ANTHRO 397RR
+ANTHRO 397S
+ANTHRO 397TT
+ANTHRO 397U
+ANTHRO 398
+ANTHRO 496
+ANTHRO 496H
+ANTHRO 497H
+ANTHRO 498
+ANTHRO 499C
+ANTHRO 499D
+ANTHRO 499P
+ANTHRO 499T
+ANTHRO 499Y
+ANTHRO 596
+ANTHRO 597AD
+ANTHRO 597K
+ANTHRO 597PP
+ANTHRO 597RD
+ANTHRO 680
+ANTHRO 696
+ANTHRO 697AT
+ANTHRO 697EE
+ANTHRO 697OO
+ANTHRO 697PE
+ANTHRO 698
+ANTHRO 699
+ANTHRO 796
+ANTHRO 802
+ANTHRO 803
+ANTHRO 804
+ANTHRO 805
+ANTHRO 899
+ARABIC 146
+ARABIC 196
+ARABIC 196H
+ARABIC 246
+ARABIC 296
+ARABIC 296H
+ARABIC 298
+ARABIC 396
+ARABIC 396H
+ARABIC 398
+ARABIC 496
+ARABIC 496H
+ARABIC 499P
+ARABIC 499T
+ARABIC 499Y
+No courses
+ARCH-DES 196H
+ARCH-DES 296H
+ARCH-DES 301
+ARCH-DES 370
+ARCH-DES 396D
+ARCH-DES 396H
+ARCH-DES 401
+ARCH-DES 404
+ARCH-DES 496D
+ARCH-DES 496H
+ARCH-DES 498A
+ARCH-DES 499P
+ARCH-DES 499T
+ARCH-DES 499Y
+ARCH-DES 501
+ARCH-DES 541
+ARCH-DES 601
+ARCH-DES 630
+ARCH-DES 650
+ARCH-DES 670
+ARCH-DES 696D
+ARCH-DES 698
+ARCH-DES 796D
+ARCH-DES 799
+ART 104
+ART 105
+ART 110
+ART 120
+ART 142
+ART 196H
+ART 201
+ART 202
+ART 220
+ART 221
+ART 223
+ART 230
+ART 231
+ART 241
+ART 256
+ART 260
+ART 261
+ART 275
+ART 280
+ART 281
+ART 296H
+ART 297B
+ART 297BB
+ART 297CC
+ART 298
+ART 311
+ART 320
+ART 363
+ART 370
+ART 384
+ART 396
+ART 396A
+ART 396B
+ART 396C
+ART 396D
+ART 396F
+ART 396H
+ART 396M
+ART 396S
+ART 396U
+ART 396Y
+ART 397H
+ART 397MM
+ART 398
+ART 401
+ART 402
+ART 404
+ART 406
+ART 420
+ART 460
+ART 461
+ART 480
+ART 481
+ART 491A
+ART 491B
+ART 491Z
+ART 496
+ART 496A
+ART 496B
+ART 496C
+ART 496D
+ART 496F
+ART 496H
+ART 496J
+ART 496M
+ART 496Y
+ART 497Q
+ART 497R
+ART 498Y
+ART 499P
+ART 499T
+ART 499Y
+ART 501
+ART 502
+ART 512
+ART 521
+ART 522
+ART 523
+ART 541
+ART 560
+ART 563
+ART 580
+ART 581
+ART 596
+ART 597B
+ART 597JJ
+ART 597R
+ART 691A
+ART 691B
+ART 696
+ART 696A
+ART 696B
+ART 696C
+ART 696D
+ART 696F
+ART 696J
+ART 696M
+ART 697OO
+ART 697Q
+ART 697R
+ART 697WS
+ART 761
+ART 792N
+ART 795
+ART 796
+ART 796A
+ART 796B
+ART 796C
+ART 796D
+ART 796F
+ART 796J
+ART 796P
+ART 799
+ART 799A
+ART 799B
+ART 799C
+ART 799D
+ART 799P
+ART-ED 501
+ART-ED 502
+ART-HIST 110
+ART-HIST 191A
+ART-HIST 196
+ART-HIST 196H
+ART-HIST 296
+ART-HIST 296H
+ART-HIST 303
+ART-HIST 305
+ART-HIST 310
+ART-HIST 329
+ART-HIST 342
+ART-HIST 370
+ART-HIST 381
+ART-HIST 384
+ART-HIST 391B
+ART-HIST 396
+ART-HIST 396H
+ART-HIST 398
+ART-HIST 496
+ART-HIST 496H
+ART-HIST 498Y
+ART-HIST 499P
+ART-HIST 499T
+ART-HIST 499Y
+ART-HIST 596
+ART-HIST 603
+ART-HIST 605
+ART-HIST 610
+ART-HIST 629
+ART-HIST 642
+ART-HIST 671
+ART-HIST 674
+ART-HIST 696
+ART-HIST 698
+ART-HIST 725
+ART-HIST 782
+ASIAN-ST 196
+ASIAN-ST 196H
+ASIAN-ST 296
+ASIAN-ST 296H
+ASIAN-ST 297B
+ASIAN-ST 396
+ASIAN-ST 396H
+ASIAN-ST 491A
+ASIAN-ST 496
+ASIAN-ST 496H
+ASIAN-ST 499P
+ASIAN-ST 499T
+ASIAN-ST 499Y
+ASTRON 100
+ASTRON 101H
+ASTRON 105
+ASTRON 190Y
+ASTRON 190Z
+ASTRON 196
+ASTRON 196H
+Traceback (most recent call last):
+  File "./load_descs.py", line 10, in <module>
+    importer.load_course_descriptions()
+  File "/home/tpetr/schedr/umass/importer.py", line 780, in load_course_descriptions
+    c = Course.objects.get(major=m, number=mat.group(1), term=t)
+  File "/var/lib/python-support/python2.6/django/db/models/manager.py", line 93, in get
+    return self.get_query_set().get(*args, **kwargs)
+  File "/var/lib/python-support/python2.6/django/db/models/query.py", line 309, in get
+    % self.model._meta.object_name)
+schedr.umass.models.DoesNotExist: Course matching query does not exist.
+/var/lib/python-support/python2.6/MySQLdb/__init__.py:34: DeprecationWarning: the sets module is deprecated
+  from sets import ImmutableSet
+/home/tpetr/schedr/accounts/models.py:4: DeprecationWarning: the sha module is deprecated; use the hashlib module instead
+  import sha
+/var/lib/python-support/python2.6/django/db/backends/mysql/base.py:83: Warning: Data truncated for column 'group_literal' at row 1
+  return self.cursor.execute(query, args)
+ENGLWRIT 111 Lecture (14476) - {'fri_location': None, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(11, 10), 'tue_start': None, 'wed_start': datetime.time(9, 40), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 40), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(11, 10), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 111 Lecture (14477) - {'fri_location': None, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(12, 45), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(12, 45), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 111 Lecture (14478) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(11, 0), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'101', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(11, 0), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'101'}
+ENGLWRIT 111 Lecture (14520) - {'fri_location': None, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(9, 30), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(9, 30), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 111 Lecture (14524) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 45), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'101', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'101'}
+ENGLWRIT 112 Lecture (14479) - {'fri_location': <Location: Bartlett Hall>, 'thu_start': None, 'wed_room': u'105', 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': u'105', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(8, 50), 'fri_room': u'105', 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14480) - {'fri_location': <Location: Emerson Dorm>, 'thu_start': None, 'wed_room': u'112', 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': <Location: Emerson Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': u'112', 'thu_end': None, 'wed_location': <Location: Emerson Dorm>, 'wed_end': datetime.time(8, 50), 'fri_room': u'112', 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14481) - {'fri_location': <Location: Butterfield Dorm>, 'thu_start': None, 'wed_room': u'7', 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': <Location: Butterfield Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': u'7', 'thu_end': None, 'wed_location': <Location: Butterfield Dorm>, 'wed_end': datetime.time(8, 50), 'fri_room': u'7', 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14482) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(8, 50), 'fri_room': None, 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14483) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(8, 50), 'fri_room': None, 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14543) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(8, 50), 'fri_room': None, 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14484) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(8, 50), 'fri_room': None, 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14485) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(8, 50), 'tue_start': None, 'wed_start': datetime.time(8, 0), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(8, 0), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(8, 50), 'fri_room': None, 'fri_start': datetime.time(8, 0), 'fri_end': datetime.time(8, 50)}
+ENGLWRIT 112 Lecture (14486) - {'fri_location': <Location: Bartlett Hall>, 'thu_start': None, 'wed_room': u'105', 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': u'105', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(9, 55), 'fri_room': u'105', 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14487) - {'fri_location': <Location: Emerson Dorm>, 'thu_start': None, 'wed_room': u'112', 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': <Location: Emerson Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': u'112', 'thu_end': None, 'wed_location': <Location: Emerson Dorm>, 'wed_end': datetime.time(9, 55), 'fri_room': u'112', 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14488) - {'fri_location': <Location: Butterfield Dorm>, 'thu_start': None, 'wed_room': u'7', 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': <Location: Butterfield Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': u'7', 'thu_end': None, 'wed_location': <Location: Butterfield Dorm>, 'wed_end': datetime.time(9, 55), 'fri_room': u'7', 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14489) - {'fri_location': <Location: Pierpont Dorm>, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': <Location: Pierpont Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Pierpont Dorm>, 'wed_end': datetime.time(9, 55), 'fri_room': u'101', 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14544) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(9, 55), 'fri_room': None, 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14545) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(9, 55), 'fri_room': None, 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14490) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(9, 55), 'fri_room': None, 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14491) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(9, 55), 'tue_start': None, 'wed_start': datetime.time(9, 5), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(9, 5), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(9, 55), 'fri_room': None, 'fri_start': datetime.time(9, 5), 'fri_end': datetime.time(9, 55)}
+ENGLWRIT 112 Lecture (14492) - {'fri_location': <Location: Bartlett Hall>, 'thu_start': None, 'wed_room': u'105', 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': u'105', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(11, 0), 'fri_room': u'105', 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14493) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14494) - {'fri_location': <Location: Pierpont Dorm>, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': <Location: Pierpont Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Pierpont Dorm>, 'wed_end': datetime.time(11, 0), 'fri_room': u'101', 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14546) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14495) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14496) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14497) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14498) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14499) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14547) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14500) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14501) - {'fri_location': <Location: Hampden DC>, 'thu_start': None, 'wed_room': u'200', 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': <Location: Hampden DC>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': u'200', 'thu_end': None, 'wed_location': <Location: Hampden DC>, 'wed_end': datetime.time(12, 5), 'fri_room': u'200', 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14502) - {'fri_location': <Location: Pierpont Dorm>, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': <Location: Pierpont Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Pierpont Dorm>, 'wed_end': datetime.time(12, 5), 'fri_room': u'101', 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14503) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14504) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14505) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14506) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(13, 10), 'fri_room': None, 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14507) - {'fri_location': <Location: Washington Dorm>, 'thu_start': None, 'wed_room': u'508', 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': <Location: Washington Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': u'508', 'thu_end': None, 'wed_location': <Location: Washington Dorm>, 'wed_end': datetime.time(13, 10), 'fri_room': u'508', 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14508) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(13, 10), 'fri_room': None, 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14509) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(13, 10), 'fri_room': None, 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14510) - {'fri_location': <Location: Hampden DC>, 'thu_start': None, 'wed_room': u'200', 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': <Location: Hampden DC>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': u'200', 'thu_end': None, 'wed_location': <Location: Hampden DC>, 'wed_end': datetime.time(13, 10), 'fri_room': u'200', 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14511) - {'fri_location': <Location: Pierpont Dorm>, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': <Location: Pierpont Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Pierpont Dorm>, 'wed_end': datetime.time(13, 10), 'fri_room': u'101', 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14548) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(13, 10), 'fri_room': None, 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14512) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(13, 10), 'fri_room': None, 'fri_start': datetime.time(12, 20), 'fri_end': datetime.time(13, 10)}
+ENGLWRIT 112 Lecture (14513) - {'fri_location': <Location: Bartlett Hall>, 'thu_start': None, 'wed_room': u'105', 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': u'105', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(14, 15), 'fri_room': u'105', 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14514) - {'fri_location': <Location: Washington Dorm>, 'thu_start': None, 'wed_room': u'508', 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': <Location: Washington Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': u'508', 'thu_end': None, 'wed_location': <Location: Washington Dorm>, 'wed_end': datetime.time(14, 15), 'fri_room': u'508', 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14515) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(14, 15), 'fri_room': None, 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14516) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(14, 15), 'fri_room': None, 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14518) - {'fri_location': <Location: Butterfield Dorm>, 'thu_start': None, 'wed_room': u'135A', 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': <Location: Butterfield Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': u'135A', 'thu_end': None, 'wed_location': <Location: Butterfield Dorm>, 'wed_end': datetime.time(14, 15), 'fri_room': u'135A', 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14517) - {'fri_location': <Location: Mary Lyon Dorm>, 'thu_start': None, 'wed_room': u'119 (loung)', 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': <Location: Mary Lyon Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': u'119 (loung)', 'thu_end': None, 'wed_location': <Location: Mary Lyon Dorm>, 'wed_end': datetime.time(14, 15), 'fri_room': u'119 (loung)', 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14519) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(14, 15), 'fri_room': None, 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14549) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(14, 15), 'tue_start': None, 'wed_start': datetime.time(13, 25), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(13, 25), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(14, 15), 'fri_room': None, 'fri_start': datetime.time(13, 25), 'fri_end': datetime.time(14, 15)}
+ENGLWRIT 112 Lecture (14550) - {'fri_location': <Location: Bartlett Hall>, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(15, 20), 'fri_room': u'101', 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14521) - {'fri_location': <Location: Butterfield Dorm>, 'thu_start': None, 'wed_room': u'135A', 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': <Location: Butterfield Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': u'135A', 'thu_end': None, 'wed_location': <Location: Butterfield Dorm>, 'wed_end': datetime.time(15, 20), 'fri_room': u'135A', 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14522) - {'fri_location': <Location: Mary Lyon Dorm>, 'thu_start': None, 'wed_room': u'119 (loung)', 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': <Location: Mary Lyon Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': u'119 (loung)', 'thu_end': None, 'wed_location': <Location: Mary Lyon Dorm>, 'wed_end': datetime.time(15, 20), 'fri_room': u'119 (loung)', 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14523) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(15, 20), 'fri_room': None, 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14525) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(15, 20), 'fri_room': None, 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14526) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(15, 20), 'fri_room': None, 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14527) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(15, 20), 'fri_room': None, 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14528) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(15, 20), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(15, 20), 'fri_room': None, 'fri_start': datetime.time(14, 30), 'fri_end': datetime.time(15, 20)}
+ENGLWRIT 112 Lecture (14529) - {'fri_location': None, 'thu_start': None, 'wed_room': u'105', 'mon_end': datetime.time(16, 50), 'tue_start': None, 'wed_start': datetime.time(15, 35), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(15, 35), 'mon_room': u'105', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(16, 50), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 112 Lecture (14551) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112 Lecture (14552) - {'fri_location': None, 'thu_start': None, 'wed_room': u'7', 'mon_end': datetime.time(13, 10), 'tue_start': None, 'wed_start': datetime.time(12, 20), 'tue_end': None, 'mon_location': <Location: Butterfield Dorm>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(12, 20), 'mon_room': u'7', 'thu_end': None, 'wed_location': <Location: Butterfield Dorm>, 'wed_end': datetime.time(13, 10), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 112 Lecture (14553) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14530) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112 Lecture (14531) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'105', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'105'}
+ENGLWRIT 112 Lecture (14532) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14533) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14534) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': <Location: Coolidge Dorm>, 'tue_room': u'510', 'tue_location': <Location: Coolidge Dorm>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'510'}
+ENGLWRIT 112 Lecture (14535) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14536) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14554) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14537) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14538) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14539) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14540) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'105', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'105'}
+ENGLWRIT 112 Lecture (14541) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': <Location: John Adams Dorm>, 'tue_room': u'508', 'tue_location': <Location: John Adams Dorm>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'508'}
+ENGLWRIT 112 Lecture (14542) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': <Location: Coolidge Dorm>, 'tue_room': u'510', 'tue_location': <Location: Coolidge Dorm>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'510'}
+ENGLWRIT 112 Lecture (14555) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14556) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14557) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': <Location: Lederle Graduate Research Center>, 'tue_room': u'A127', 'tue_location': <Location: Lederle Graduate Research Center>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'A127'}
+ENGLWRIT 112 Lecture (14558) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': <Location: W.E.B. DuBois Library>, 'tue_room': u'1667', 'tue_location': <Location: W.E.B. DuBois Library>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'1667'}
+ENGLWRIT 112 Lecture (14559) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14560) - {'fri_location': None, 'thu_start': None, 'wed_room': u'101', 'mon_end': datetime.time(15, 45), 'tue_start': None, 'wed_start': datetime.time(14, 30), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(14, 30), 'mon_room': u'101', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(15, 45), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 112 Lecture (14561) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (14562) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'105', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'105'}
+ENGLWRIT 112 Lecture (17727) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17728) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': <Location: John Adams Dorm>, 'tue_room': u'508', 'tue_location': <Location: John Adams Dorm>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'508'}
+ENGLWRIT 112 Lecture (17729) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': <Location: Butterfield Dorm>, 'tue_room': u'135A', 'tue_location': <Location: Butterfield Dorm>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'135A'}
+ENGLWRIT 112 Lecture (17730) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17731) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17732) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17733) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17744) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17745) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17746) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'105', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'105'}
+ENGLWRIT 112 Lecture (17747) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17748) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': <Location: W.E.B. DuBois Library>, 'tue_room': u'1667', 'tue_location': <Location: W.E.B. DuBois Library>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'1667'}
+ENGLWRIT 112 Lecture (17749) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': <Location: W.E.B. DuBois Library>, 'tue_room': u'720', 'tue_location': <Location: W.E.B. DuBois Library>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'720'}
+ENGLWRIT 112 Lecture (17750) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17751) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17771) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112 Lecture (17753) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': <Location: Kennedy Dorm>, 'tue_room': u'510', 'tue_location': <Location: Kennedy Dorm>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'510'}
+ENGLWRIT 112 Lecture (17754) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112H Lecture (17763) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(11, 0), 'tue_start': None, 'wed_start': datetime.time(10, 10), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(10, 10), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(11, 0), 'fri_room': None, 'fri_start': datetime.time(10, 10), 'fri_end': datetime.time(11, 0)}
+ENGLWRIT 112H Lecture (17764) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetime.time(12, 5), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(12, 5), 'fri_room': None, 'fri_start': datetime.time(11, 15), 'fri_end': datetime.time(12, 5)}
+ENGLWRIT 112H Lecture (17765) - {'fri_location': None, 'thu_start': None, 'wed_room': None, 'mon_end': datetim/var/lib/python-support/python2.6/django/db/backends/mysql/base.py:83: Warning: Data truncated for column 'number' at row 1
+  return self.cursor.execute(query, args)
+e.time(16, 50), 'tue_start': None, 'wed_start': datetime.time(15, 35), 'tue_end': None, 'mon_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(15, 35), 'mon_room': None, 'thu_end': None, 'wed_location': None, 'wed_end': datetime.time(16, 50), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+ENGLWRIT 112H Lecture (17766) - {'fri_location': None, 'thu_start': datetime.time(9, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(9, 30), 'wed_start': None, 'tue_end': datetime.time(10, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(10, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112H Lecture (17767) - {'fri_location': None, 'thu_start': datetime.time(11, 15), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(11, 15), 'wed_start': None, 'tue_end': datetime.time(12, 30), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(12, 30), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112H Lecture (17768) - {'fri_location': None, 'thu_start': datetime.time(14, 30), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(14, 30), 'wed_start': None, 'tue_end': datetime.time(15, 45), 'mon_location': None, 'thu_location': None, 'tue_room': None, 'tue_location': None, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(15, 45), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': None}
+ENGLWRIT 112H Lecture (17769) - {'fri_location': None, 'thu_start': datetime.time(13, 0), 'wed_room': None, 'mon_end': None, 'tue_start': datetime.time(13, 0), 'wed_start': None, 'tue_end': datetime.time(14, 15), 'mon_location': None, 'thu_location': <Location: Bartlett Hall>, 'tue_room': u'101', 'tue_location': <Location: Bartlett Hall>, 'mon_start': None, 'mon_room': None, 'thu_end': datetime.time(14, 15), 'wed_location': None, 'wed_end': None, 'fri_room': None, 'fri_start': None, 'fri_end': None, 'thu_room': u'101'}
+ENGLWRIT 112H Lecture (17770) - {'fri_location': None, 'thu_start': None, 'wed_room': u'105', 'mon_end': datetime.time(12, 30), 'tue_start': None, 'wed_start': datetime.time(11, 15), 'tue_end': None, 'mon_location': <Location: Bartlett Hall>, 'tue_room': None, 'tue_location': None, 'mon_start': datetime.time(11, 15), 'mon_room': u'105', 'thu_end': None, 'wed_location': <Location: Bartlett Hall>, 'wed_end': datetime.time(12, 30), 'fri_room': None, 'fri_start': None, 'fri_end': None}
+Traceback (most recent call last):
+  File "./nightly_school_update.py", line 42, in <module>
+    importer.cache_data()
+AttributeError: 'module' object has no attribute 'cache_data'

@@ -1,0 +1,494 @@
+from schedr.util import PeopleSoft9, Memoize
+import re, math
+from itertools import izip
+from datetime import time
+from sets import Set
+from schedr.northwestern.models import Term, Major, Course, LocationImport, Instructor, Location, Section
+from schedr import util
+import os
+from BeautifulSoup import BeautifulSoup, BeautifulStoneSoup
+
+sem_regex = re.compile(r'^(\d{4}) (.*)$')
+sem2_regex = re.compile(r'^\d{4}-\d{2} Academic Year$')
+major_regex = re.compile(r'^.*? - (.*)$')
+
+class_regex = re.compile(r'^.*? (.*?) - (.*)$')
+table_regex = re.compile(r'^\$ICField44\$scroll\$\d+$')
+link_regex = re.compile(r'^DERIVED_CLSRCH_SSR_CLASSNAME_LONG\$\d+$')
+table2_regex = re.compile(r'^SSR_CLSRCH_MTG1\$scroll\$\d+$')
+section_regex = re.compile(r'^(.*?) (.*?) ?\((.*?)\)$')
+time_regex = re.compile(r'^(.*?) (\d+):(\d+)([APM]{2}) - (\d+):(\d+)([APM]{2})$')
+
+class CAESAR(PeopleSoft9):
+    def __init__(self):
+        PeopleSoft9.__init__(self, "https://ses.ent.northwestern.edu/psp/s9prod/", "https://ses.ent.northwestern.edu/psc/s9prod/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.CLASS_SEARCH.GBL", "https://ses.ent.northwestern.edu/psc/s9prod/EMPLOYEE/HRMS/c/SA_LEARNER_SERVICES.CLASS_SEARCH.GBL?pslnkid=NW_SS_SA_CLASS_SEARCH&FolderPath=PORTAL_ROOT_OBJECT.NW_SS_SA_CLASS_SEARCH&IsFolder=false&IgnoreParamTempl=FolderPath%2cIsFolder&PortalActualURL=https%3a%2f%2fses.ent.northwestern.edu%2fpsc%2fs9prod%2fEMPLOYEE%2fHRMS%2fc%2fSA_LEARNER_SERVICES.CLASS_SEARCH.GBL%3fpslnkid%3dNW_SS_SA_CLASS_SEARCH&PortalContentURL=https%3a%2f%2fses.ent.northwestern.edu%2fpsc%2fs9prod%2fEMPLOYEE%2fHRMS%2fc%2fSA_LEARNER_SERVICES.CLASS_SEARCH.GBL%3fpslnkid%3dNW_SS_SA_CLASS_SEARCH&PortalContentProvider=HRMS&PortalCRefLabel=Search%20for%20Classes&PortalRegistryName=EMPLOYEE&PortalServletURI=https%3a%2f%2fses.ent.northwestern.edu%2fpsp%2fs9prod%2f&PortalURI=https%3a%2f%2fses.ent.northwestern.edu%2fpsc%2fs9prod%2f&PortalHostNode=HRMS&NoCrumbs=yes", icsid=True)
+
+    def login(self):
+        return PeopleSoft9.login(self, "WEBGUEST", "WEBGUEST1")
+
+    def select_term(self, term_id):
+        self.term_id = term_id
+        self.status = self.SEARCH_QUERY
+
+    def search(self, major, course=''):
+        return PeopleSoft9.search(self, {'ICAction': 'CLASS_SRCH_WRK2_SSR_PB_CLASS_SRCH', 'CLASS_SRCH_WRK2_INSTITUTION$46$': 'NWUNV', 'CLASS_SRCH_WRK2_STRM$49$': self.term_id, 'CLASS_SRCH_WRK2_SUBJECT$62$': major, 'CLASS_SRCH_WRK2_CATALOG_NBR$70$': course, 'CLASS_SRCH_WRK2_SSR_EXACT_MATCH1': 'E', 'CLASS_SRCH_WRK2_ACAD_CAREER': 'UGRD', 'CLASS_SRCH_WRK2_SSR_OPEN_ONLY$chk': 'N'})
+
+def create_current_term():
+    from datetime import datetime
+    dt = datetime.today()
+    
+    data = terms()
+    year = dt.year
+    semesters = ['Winter', 'Spring', 'Summer', 'Fall']
+    num = (dt.month / 3) % 4
+    semester = semesters[num]   
+    school_id = data[year][semester]
+
+    t = Term(name="%s%i" % (semester.lower(), year), year=year, semester=((num + 3) % 4), school_id=school_id)
+    t.save()
+    return t
+
+@Memoize
+def terms():
+    results = {}
+    s = CAESAR()
+    html = BeautifulSoup(s.login())
+    select = html.find('select', id='CLASS_SRCH_WRK2_STRM$49$')
+    for option in select.findAll('option'):
+        if option['value'] == '':
+            continue
+        if sem2_regex.match(option.string) is not None:
+            continue
+        m = sem_regex.match(option.string)
+        year = results.get(m.group(1), {})
+        year[m.group(2)] = option['value']
+        results[int(m.group(1))] = year
+    s.logout()
+    return results
+
+@Memoize
+def majors():
+    results = {}
+    s = CAESAR()
+    html = BeautifulSoup(s.login())
+    select = html.find('select', id='CLASS_SRCH_WRK2_SUBJECT$62$')
+    for option in select.findAll('option'):
+        if option['value'] == '':
+            continue
+        name = option['value']
+        title = BeautifulStoneSoup(major_regex.match(option.string).group(1), convertEntities=BeautifulStoneSoup.HTML_ENTITIES).contents[0]
+        results[name] = title
+    s.logout()
+    return results
+
+def import_majors():
+    data = majors()
+    for major in data:
+        import_major(name=major, title=data[major])
+
+def cache_callback(term, major, data):
+    fp = open("/tmp/schedr/umass/%s-%s.html" % (term, major), "w")
+    fp.write(data)
+    fp.close()
+    
+def cache_threaded(callback=None, threads=6):
+    if callback is None:
+        callback = cache_callback
+    try:
+        os.makedirs("/tmp/schedr/northwestern/")
+    except:
+        pass
+    util.cache_threaded(Term, Major, SPIRE, callback, threads)
+
+def cache_all(s=None, threads=6):
+    logout = False
+    if s == None:
+        s = SPIRE()
+        s.login()
+        logout = True
+
+    for term in Term.objects.filter(active=True):
+        cache_term(term, s, threads)
+
+    if logout:
+        s.logout()
+
+def parse(filename, term, major, on_course=lambda **x: None, on_section=lambda **x: None):
+    f = open(filename, "r")
+    html = BeautifulSoup(f.read())
+    f.close()
+
+
+    for table in html.findAll(name="table", id=table_regex):
+        tr = table.parent.parent.parent.parent.parent.parent.parent.parent
+        tr = tr.findPreviousSibling('tr').findPreviousSibling('tr')
+        span = tr.find('span', {'class': 'SSSHYPERLINKBOLD'})
+        course_gened = None
+        if span is None:
+            span = tr.find('span', {'class': 'PSEDITBOX_DISPONLY'})
+            course_gened = span.string
+            tr = tr.findPreviousSibling('tr').findPreviousSibling('tr')
+            span = tr.find('span', {'class': 'SSSHYPERLINKBOLD'})
+            
+        str = span.string.replace('&nbsp;', '').replace('\r\n', ' ')
+        str = BeautifulStoneSoup(str, convertEntities=BeautifulStoneSoup.HTML_ENTITIES).contents[0]
+        course_number, course_title = class_regex.match(str).groups()
+        course = on_course(term=term, major=major, number=course_number, title=course_title, gened=course_gened)
+
+        links = table.findAll('a', id=link_regex)
+        tables = table.findAll('table', id=table2_regex)
+        for link, table in izip(links, tables):
+            section_group, section_type, section_school_id = section_regex.match(link.string).groups()
+            section_times = {}
+            section_instructors = []
+            section_status = 'Open'
+            section_tba = True
+            rows = table.findAll('tr', valign='center')
+            rows.pop(0)
+            for row in rows:
+                span_time, span_loc, span_ins = tuple(row.findAll('span', {'class': 'PSLONGEDITBOX'})[0:3])
+                ins = BeautifulStoneSoup(span_ins.renderContents(), convertEntities=BeautifulStoneSoup.HTML_ENTITIES).renderContents().replace('\r', '').replace('\n', '').replace('<br>', '').replace(r'</br>', '')
+                for name in ins.split(', '):
+                    section_instructors.append(name)
+
+                if span_time.string == 'TBA':
+                    section_tba = True
+                    break
+                
+                m = time_regex.match(span_time.renderContents())
+
+                sh = int(m.group(2))
+                if (m.group(4) == 'PM') and (sh != 12):
+                    sh = sh + 12
+
+                eh = int(m.group(5))
+                if (m.group(7) == 'PM') and (eh != 12):
+                    eh = eh + 12
+                
+                time_start = time(sh, int(m.group(3)))
+                time_end = time(eh, int(m.group(6)))
+
+                loc = BeautifulStoneSoup(span_loc.renderContents().replace('&nbsp;', ''), convertEntities=BeautifulStoneSoup.HTML_ENTITIES).contents[0]
+
+                if m.group(1).find('Mo') > -1:
+                    section_times['mon_start'] = time_start
+                    section_times['mon_end'] = time_end
+                    section_times['mon_location'] = loc
+                    section_tba = False
+                if m.group(1).find('Tu') > -1:
+                    section_times['tue_start'] = time_start
+                    section_times['tue_end'] = time_end
+                    section_times['tue_location'] = loc
+                    section_tba = False
+                if m.group(1).find('We') > -1:
+                    section_times['wed_start'] = time_start
+                    section_times['wed_end'] = time_end
+                    section_times['wed_location'] = loc
+                    section_tba = False
+                if m.group(1).find('Th') > -1:
+                    section_times['thu_start'] = time_start
+                    section_times['thu_end'] = time_end
+                    section_times['thu_location'] = loc
+                    section_tba = False
+                if m.group(1).find('Fr') > -1:
+                    section_times['fri_start'] = time_start
+                    section_times['fri_end'] = time_end
+                    section_times['fri_location'] = loc
+                    section_tba = False
+
+            section = on_section(course=course, group_literal=section_group, type=section_type, school_id=section_school_id, instructors=Set(section_instructors), status=section_status, tba=section_tba, **section_times)
+
+def import_major(name, title):
+    try:
+        m = Major.objects.get(name=name)
+    except Major.DoesNotExist:
+        m = Major(name=name)
+    if title is not None:
+        m.title = title
+    m.save()
+    return m
+
+def import_course(term, major, number, title, gened=None):
+    try:
+        c = Course.objects.get(term=term, major=major, number=number)
+        c.title = title
+        c.gened = gened
+    except Course.DoesNotExist:
+        c = Course(term=term, major=major, number=number, title=title, gened=gened)
+    c.save()
+    return c
+
+def import_section(course, group, group_literal, school_id, instructors, tba, status, type, **kwargs):
+    try:
+        s = Section.objects.get(school_id=school_id)
+    except Section.DoesNotExist:
+        s = Section(course=course, school_id=school_id)
+    s.group = group
+    s.group_literal = group_literal
+    s.tba = tba
+    s.status = status
+    s.type = type
+
+    s.mon_start = kwargs.get('mon_start', None)
+    s.mon_end = kwargs.get('mon_end', None)
+    s.mon_location = kwargs.get('mon_location', None)
+    s.mon_room = kwargs.get('mon_room', None)
+
+    s.tue_start = kwargs.get('tue_start', None)
+    s.tue_end = kwargs.get('tue_end', None)
+    s.tue_location = kwargs.get('tue_location', None)
+    s.tue_room = kwargs.get('tue_room', None)
+
+    s.wed_start = kwargs.get('wed_start', None)
+    s.wed_end = kwargs.get('wed_end', None)
+    s.wed_location = kwargs.get('wed_location', None)
+    s.wed_room = kwargs.get('wed_room', None)
+
+    s.thu_start = kwargs.get('thu_start', None)
+    s.thu_end = kwargs.get('thu_end', None)
+    s.thu_location = kwargs.get('thu_location', None)
+    s.thu_room = kwargs.get('thu_room', None)
+
+    s.fri_start = kwargs.get('fri_start', None)
+    s.fri_end = kwargs.get('fri_end', None)
+    s.fri_location = kwargs.get('fri_location', None)
+    s.fri_room = kwargs.get('fri_room', None)
+
+    s.save()
+
+    s.instructors = instructors
+
+    s.save()
+
+    return s
+
+def import_instructor(name, rating_id=None):
+    try:
+        i = Instructor.objects.get(name=name)
+    except Instructor.DoesNotExist:
+        i = Instructor(name=name)
+    if (rating_id != None):
+        i.rating_id = rating_id
+    i.save()
+    return i
+
+def import_location(name, title):
+    try:
+        l = Location.objects.get(name=name)
+        l.title = title
+    except Location.DoesNotExist:
+        l = Location(name=name, title=title)
+    l.save()
+    return l
+
+def normalize_status(str):
+    if str == 'Open':
+        return Section.OPEN
+    elif str == 'Closed':
+        return Section.CLOSED
+    elif str == 'Cancelled':
+        return Section.CANCELLED
+    elif str == 'Waitlist':
+        return Section.WAITLIST
+
+    return Section.OPEN
+
+def normalize_type(str):
+    if str == 'Lecture':
+        return Section.LEC
+    elif str == 'Discussion':
+        return Section.DIS
+    elif str == 'Discussion 01':
+        return Section.DIS
+    elif str == 'Laboratory':
+        return Section.LAB
+    elif str == 'Practicum':
+        return Section.PCM
+    elif str == 'Independent Study':
+        return Section.IND
+    elif str == 'Individualized Study':
+        return Section.IND
+    elif str == 'Seminar':
+        return Section.SEM
+    elif str == 'DST':
+        return Section.DST
+    elif str == 'Dissertation/Thesis':
+        return Section.DST
+    elif str == 'Studio':
+        return Section.STU
+    elif str == 'Studio / Skills':
+        return Section.STU
+    else:
+        print "Unknown type: %s" % (str,)
+        return Section.LEC
+
+def normalize_group(str, type):
+    group = 1
+    m = None
+    if type == Section.LEC:
+        regex1 = re.compile(r'^([A-Z])L\d+$')
+        regex2 = re.compile(r'^([A-Z])$')
+        m = regex1.match(str)
+        if m is None:
+            m = regex2.match(str)
+    elif type == Section.DIS:
+         regex1 = re.compile(r'^([A-Z])D\d+$')
+         m = regex1.match(str)
+    elif type == Section.LAB:
+         regex1 = re.compile(r'^([A-Z])L\d+$')
+         m = regex1.match(str)
+
+    if m != None:
+         group = m.group(1)
+
+    return group
+
+def normalize_gened(str):
+    if str is None:
+        return str
+    str = str.replace(' ', '')
+    if str == 'AL':
+        return Course.AL
+    elif str == 'ALG':
+        return Course.ALG
+    elif str == 'ALU':
+        return Course.ALU
+    elif str == 'AT':
+        return Course.AT
+    elif str == 'ATG' or str == 'ATATG':
+        return Course.ATG
+    elif str == 'ATU':
+        return Course.ATU
+    elif str == 'BS':
+        return Course.BS
+    elif str == 'CW':
+        return Course.CW
+    elif str == 'G':
+        return Course.G
+    elif str == 'HS':
+        return Course.HS
+    elif str == 'HSG' or str == 'GHS':
+        return Course.HSG
+    elif str == 'HSU':
+        return Course.HSU
+    elif str == 'I':
+        return Course.I
+    elif str == 'IG' or str == 'GI':
+        return Course.IG
+    elif str == 'IU':
+        return Course.IU
+    elif str == 'PS':
+        return Course.PS
+    elif str == 'R1':
+        return Course.R1
+    elif str == 'R2':
+        return Course.R2
+    elif str == 'SB':
+        return Course.SB
+    elif str == 'SBG' or str == 'GSB':
+        return Course.SBG
+    elif str == 'SBU':
+        return Course.SBU
+    elif str == 'SI':
+        return Course.SI
+    elif str == 'SIG':
+        return Course.SIG
+    elif str == 'SIU':
+        return Course.SIU
+    elif str == 'U':
+        return Course.U
+    else:
+        print "Unknown gened: %s" % (str,)
+        return None
+
+class UnknownLocation(Exception):
+    pass
+
+def generate_location_imports():
+    imports = []
+    for li in LocationImport.objects.all():
+        imports.append((li, re.compile(li.regex, re.IGNORE_CASE)))
+
+    return imports
+
+def normalize_location(str, imports=None):
+    if str is None:
+        return (None, None)
+
+    if imports is None:
+        imports = generate_location_imports()
+
+    for li, p in imports:
+        m = p.match(str)
+        if m is None:
+            continue
+        if (li.location is None):
+            return (None, None)
+        else:
+            return (li.location, li.room % m.groupdict())
+    raise UnknownLocation()
+
+
+def import_file(filename, term, major, unknown_locations=Set(), imports=None):
+    if imports is None:
+        imports = generate_location_imports()
+
+    def import_file_course(term, major, number, title, gened=None):
+        return import_course(term=term, major=major, number=number, title=title, gened=normalize_gened(gened))
+    def import_file_section(course, group_literal, school_id, instructors, tba, status, type, **kwargs):
+        status = normalize_status(status)
+        type = normalize_type(type)
+        group = normalize_group(group_literal, type)
+        ins = map(lambda x: import_instructor(x), instructors)
+        
+        try:
+            kwargs['mon_location'], kwargs['mon_room'] = normalize_location(kwargs.get('mon_location', None), imports)
+        except UnknownLocation:
+            unknown_locations.add(kwargs.get('mon_location', None))
+            kwargs['mon_location'] = None
+            kwargs['mon_room'] = None
+
+        try:
+            kwargs['tue_location'], kwargs['tue_room'] = normalize_location(kwargs.get('tue_location', None), imports)
+        except UnknownLocation:
+            unknown_locations.add(kwargs.get('tue_location', None))
+            kwargs['tue_location'] = None
+            kwargs['tue_room'] = None
+
+        try:
+            kwargs['wed_location'], kwargs['wed_room'] = normalize_location(kwargs.get('wed_location', None), imports)
+        except UnknownLocation:
+            unknown_locations.add(kwargs.get('wed_location', None))
+            kwargs['wed_location'] = None
+            kwargs['wed_room'] = None
+
+        try:
+            kwargs['thu_location'], kwargs['thu_room'] = normalize_location(kwargs.get('thu_location', None), imports)
+        except UnknownLocation:
+            unknown_locations.add(kwargs.get('thu_location', None))
+            kwargs['thu_location'] = None
+            kwargs['thu_room'] = None
+
+        try:
+            kwargs['fri_location'], kwargs['fri_room'] = normalize_location(kwargs.get('fri_location', None), imports)
+        except UnknownLocation:
+            unknown_locations.add(kwargs.get('fri_location', None))
+            kwargs['fri_location'] = None
+            kwargs['fri_room'] = None
+
+        import_section(course=course, group=group, group_literal=group_literal, school_id=school_id, instructors=ins, tba=tba, status=status, type=type, **kwargs)
+        
+    parse(filename, term, major, import_file_course, import_file_section)
+
+def import_term(term, unknown_locations=Set(), imports=None):
+    if imports is None:
+        imports = generate_location_imports()
+
+    for major in Major.objects.all():
+        print major
+        import_file("/tmp/schedr/umass/%s-%s.html" % (term.school_id, major.name), term, major, unknown_locations)
+
+def import_all(unknown_locations=Set()):
+    imports = generate_location_imports()
+    for term in Term.objects.filter(active=True):
+        import_term(term, unknown_locations, imports)

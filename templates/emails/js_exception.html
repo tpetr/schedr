@@ -1,0 +1,9 @@
+<table>
+<tr><th>File</th><td>{{ url }}, Line {{ num }}</td></tr>
+<tr><th>Exception</th><td>{{ msg }}</td></tr>
+<tr><th>User</th><td>{{ request.user.username }} - {{ request.user.email }}</td></tr>
+<tr><th>User-Agent</th><td>{{ useragent }}</td></tr>
+</table>
+<pre>Snapshot:
+{{ data }}
+</pre>

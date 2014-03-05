@@ -1,0 +1,25 @@
+{% extends "base.html" %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+{% endblock %}
+
+
+{% block content %}
+<div class="fancy">
+<div style="padding:20px">
+<table width="100%"><tr><td colspan=2>
+<h1 style="text-align:center;padding:20px;">Grant "{{ app.name }}" access to your Schedr data?</h1></td></tr><tr><td align=center>
+<form action="/oauth/authorize/?{{ params }}" method="post">
+<input type="hidden" name="authorize_access" value="0">
+<input type="submit" value="Deny" style="font-size:25px;">
+</form>
+</td><td align=center>
+<form action="/oauth/authorize/?{{ params }}" method="post">
+<input type="hidden" name="authorize_access" value="1">
+<input type="submit" value="Allow" style="font-size:25px">
+</form>
+</td></tr></table>
+</div>
+</div>
+{% endblock %}

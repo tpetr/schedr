@@ -1,0 +1,58 @@
+<html>
+<head>
+<title>Schedr &raquo; Press</title>
+<link href="/static/css/main.css" rel="stylesheet" type="text/css" />
+</head>
+<body>
+<div id="main">
+<div class="container">
+<div id="login">
+{% if user.is_authenticated %}
+<p>Logged in as {{ user.username }} ({{ user.schedruser.school.title }})</p>
+<p><a href="/home">My Schedule</a> || <a href="/account/logout">Logout</a></p>
+{% else %}
+<form action="/account/login/" method="post">
+<table class="login">
+<tr><th>Username<br>or Email</th><td><input maxlength="75" name="name"></td></tr>
+<tr><th>Password</th><td><input type="password" name="password"></td></tr>
+<tr><th>&nbsp;</th><th><input type="submit" value="Login"></th></tr>
+</table>
+<a href="/account/register">Register for free</a>
+</form>
+{% endif %}
+</div>
+<a href="/"><img src="/static/img/schedr.png" border=0></a>
+</div>
+</div>
+<div id="info">
+<div class="container">
+<h1 style="text-align:center">Schedr in the news...</h1>
+<div style="padding:40px 0px 0px 0px;">
+<ul>
+<li><a href="">How to make your registration CAESAR-free</a><br>
+November 16th, 2009 - North by Northwestern (Northwestern University)<br><br></li>
+<li><a href="http://www.dailycollegian.com/news/new-online-tool-for-umass-course-registration-1.1643836">New online tool for UMass course registration</a><br>April 5th, 2009 - The Daily Collegian (UMass Amherst)<br/><br/></li>
+</ul>
+</div>
+</div>
+</div>
+<div id="footer">
+<div class="container">
+<ul>
+<li><a href="/info/about">About</a></li>
+<li><a href="/info/press">Press</a></li>
+<li><a href="/info/contact">Contact</a></li>
+<li>&copy; Schedr.com 2007-2009</li>
+</ul>
+<ul>
+<li><a href="http://www.facebook.com/pages/Schedr/43331106562" target="_blank">Facebook</a></li>
+<li><a href="http://www.twitter.com/schedr" target="_blank">Twitter</a></li>
+</ul>
+<ul style="text-align:right">
+<!-- <li><a href="http://www.djangoproject.com/" target="_blank"><img src="http://media.djangoproject.com/img/badges/djangomade124x25.gif" border="0" alt="Made with Django." title="Made with Django." /></a></li>
+<li><a href="http://www.jquery.com/"><img src="http://drupal.org/files/images/jq.png" border="0"></a></li> -->
+</ul>
+</div>
+</div>
+</body>
+</html>

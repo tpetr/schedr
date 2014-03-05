@@ -1,0 +1,16 @@
+{% extends "base.html" %}
+
+{% block content %}
+<h1>Methods</h1>
+<ul>
+{% for method in api_methods %}
+<li><a href="/api-doc/{{ method.name }}">{{ method.name }}</a> - {{ method.doc }}</li>
+{% endfor %}
+</ul>
+<h1>OAuth Methods</h1>
+<ul>
+{% for method in oauth_methods %}
+<li><a href="/api-doc/{{ method.name }}">{{ method.name }}</a> - {{ method.doc }}</li>
+{% endfor %}
+</ul>
+{% endblock %}

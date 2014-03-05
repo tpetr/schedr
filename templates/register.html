@@ -1,0 +1,177 @@
+{% extends "base.html" %}
+
+{% block title %} | Register{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+h1 {
+	text-align:center;
+	padding:20px;
+	font-size:30px;
+}
+h2 {
+	text-align:center;
+}
+table {
+	margin:auto;
+}
+table th {
+	text-align:right;
+	padding:15px 5px;
+	font-size:14px;
+	width:180px;
+}
+table td.info {
+	width:180px;
+	padding:5px;
+	font-size:14px;
+}
+table td input {
+	font-size:16px;
+}
+span.pass {
+	background:url(http://schedr.com/media/img/admin/icon-yes.gif) no-repeat left center;
+	padding-left:15px;
+	color:green;
+}
+span.fail {
+	background:url(http://schedr.com/media/img/admin/icon-no.gif) no-repeat left center;
+	padding-left:15px;
+	color:red;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fancy">
+<h1>Register</h1>
+<form action="/reg" method="post" autocomplete="off">
+<table>
+<tr><th>Your name:</th><td>{{ form.full_name }}</td><td class="info"><small>(optional)</small></td></tr>
+<tr><th>Username:</th><td>{{ form.username }}</td><td class="info"><span id="username_info" {% if form.username.errors %}class="fail"{% endif %}>{% for error in form.username.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Email:</th><td>{{ form.email }}</td><td class="info"><span id="email_info" {% if form.email.errors %}class="fail"{% endif %}>{% for error in form.email.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Password:</th><td>{{ form.password1 }}</td><td class="info"><span id="password1_info" {% if form.password1.errors %}class="fail"{% endif %}>{% for error in form.password1.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>Repeat Password:</th><td>{{ form.password2 }}</td><td class="info"><span id="password2_info" {% if form.password2.errors %}class="fail"{% endif %}>{% for error in form.password2.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>&nbsp;</th><td style="text-align:center"><input type="submit" value="Register"/></td><td class="info">&nbsp;</td></tr>
+</table>
+
+</form>
+<br>
+<h2>Already registered? <a href="/account/login/">Login</a></h2>
+<br>
+</div>
+
+<script src="/static/js/jquery-1.3.1.min.js"></script>
+<script>
+String.prototype.endsWith = function(str)
+{return (this.match(str+"$")==str)}
+var schools = {
+{% for school in schools %}
+"{{ school.email_suffix }}": "{{ school.title }}",
+{% endfor %}
+};
+
+$("#id_username").blur(function (event) {
+	var info = document.getElementById('username_info')
+
+	if (event.target.value == '') {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+		return;
+	}
+
+	info.className = 'thinking';
+	info.innerHTML = 'Checking...';
+
+	$.ajax({url: '/account/username_avail', data: {username: $('#id_username')[0].value}, complete: function (resp) {
+		if (resp.responseText == '1') {
+			info.className = 'pass';
+			info.innerHTML = 'OK';
+		} else {
+			info.className = 'fail';
+			info.innerHTML = 'Already taken'
+		}
+	}});
+});
+
+$('#id_email').blur(function (event) {
+	var info = $('#email_info')[0];
+
+	if (event.target.value == '') {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+		return;
+	}
+
+	if (!event.target.value.endsWith('.edu')) {
+		info.className = 'fail';
+		info.innerHTML = 'School emails only';
+		return;
+	}
+
+	for (var suffix in schools) {
+		if (event.target.value.endsWith(suffix)) {
+			info.className = 'pass';
+			info.innerHTML = schools[suffix];
+			$.ajax({url: '/account/email_avail', data:{email: $('#id_email')[0].value}, complete: function (resp) {
+				if (resp.responseText == '0') {
+					info.className = 'fail';
+					info.innerHTML = 'In use';
+				}
+			}});
+			return;
+		}
+	}
+	info.className = 'fail';
+	info.innerHTML = 'School not supported yet';
+});
+
+$('#id_password1').blur(function (event) {
+	var strongRegex = new RegExp("^(?=.{8,})(?=.*[A-Z])(?=.*[a-z])(?=.*[0-9])(?=.*\\W).*$", "g");
+	var mediumRegex = new RegExp("^(?=.{7,})(((?=.*[A-Z])(?=.*[a-z]))|((?=.*[A-Z])(?=.*[0-9]))|((?=.*[a-z])(?=.*[0-9]))).*$", "g");
+	var enoughRegex = new RegExp("(?=.{6,}).*", "g");
+
+	var pwd = event.target;
+	var info = document.getElementById('password1_info');
+
+	if (pwd.value.length==0) {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+	} else if (false == enoughRegex.test(pwd.value)) {
+		info.className = 'fail';
+		info.innerHTML = 'Needs to be longer';
+	} else if (strongRegex.test(pwd.value)) {
+		info.className = 'pass';
+		info.innerHTML = 'Strong';
+	} else if (mediumRegex.test(pwd.value)) {
+		info.className = 'pass';
+		info.innerHTML = 'OK';
+	} else {
+		info.className = 'fail';
+		info.innerHTML = 'Weak';
+	}
+});
+
+$('#id_password2').blur(function (event) {
+	var p1 = document.getElementById('id_password1').value
+	var info = $('#password2_info')[0];
+	if (event.target.value == '') {
+		info.className = 'fail';
+		info.innerHTML = 'Required';
+		return;
+	}
+		
+	if (event.target.value == p1) {
+		info.className = 'pass';
+		info.innerHTML = '';
+	} else {
+		info.className = 'fail';
+		info.innerHTML = 'Passwords don\'t match';
+	}
+});
+		
+
+</script>
+{% endblock %}
+

@@ -1,0 +1,8 @@
+<img src="{{ url }}">
+<table>
+<tr><th>Date</th><th>Count</th></tr>
+{% for row in rows %}
+<tr><td>{{ row.0 }}</td><td style="text-align:right">{{ row.1 }}</td></tr>
+{% endfor %}
+</table>
+<b>Total: {{ total }}</b>

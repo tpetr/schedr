@@ -1,0 +1,25 @@
+{% extends "base/calendar.html" %}
+
+{% block schedrinclude %}
+<script src="/static/js/schedr2.js"></script>
+{% endblock %}
+
+{% block geneds %}
+<ul class="gened-list"><li class="first">Filter geneds:</li>
+<li><input type="checkbox" class="gened" name="AL" onchange="schedr.search.update()"> AL</li>
+<li><input type="checkbox" class="gened" name="AT" onchange="schedr.search.update()"> AT</li>
+<li><input type="checkbox" class="gened" name="BS" onchange="schedr.search.update()"> BS</li>
+<li><input type="checkbox" class="gened" name="CW" onchange="schedr.search.update()"> CW</li>
+<li><input type="checkbox" class="gened" name="HS" onchange="schedr.search.update()"> HS</li>
+<li><input type="checkbox" class="gened" name="PS" onchange="schedr.search.update()"> PS</li>
+<li><input type="checkbox" class="gened" name="R1" onchange="schedr.search.update()"> R1</li>
+<li><input type="checkbox" class="gened" name="R2" onchange="schedr.search.update()"> R2</li>
+<li><input type="checkbox" class="gened" name="SB" onchange="schedr.search.update()"> SB</li>
+<li><input type="checkbox" class="gened" name="SI" onchange="schedr.search.update()"> SI</li>
+<li><input type="checkbox" class="gened" name="G" onchange="schedr.search.update()"> G</li>
+<li><input type="checkbox" class="gened" name="U" onchange="schedr.search.update()"> U</li>
+<li><input type="checkbox" class="gened" name="I" onchange="schedr.search.update()"> I</li>
+</ul>
+{% endblock %}
+
+{% block import_title %}Import from SPIRE{% endblock %}

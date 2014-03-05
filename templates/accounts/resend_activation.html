@@ -1,0 +1,61 @@
+{% extends "base.html" %}
+
+{% block title %} | Resend Activation Email{% endblock %}
+
+{% block head %}
+<link href="/static/css/schedr-listing.css" rel="stylesheet" type="text/css" />
+<style>
+h1 {
+	text-align:center;
+	padding:20px;
+	font-size:30px;
+}
+h2 {
+	text-align:center;
+}
+table {
+	margin:auto;
+}
+table th {
+	text-align:right;
+	padding:15px 5px;
+	font-size:14px;
+	width:180px;
+}
+table td.info {
+	width:180px;
+	padding:5px;
+	font-size:14px;
+}
+table td input {
+	font-size:16px;
+}
+span.pass {
+	background:url(http://schedr.com/media/img/admin/icon-yes.gif) no-repeat left center;
+	padding-left:15px;
+	color:green;
+}
+span.fail {
+	background:url(http://schedr.com/media/img/admin/icon-no.gif) no-repeat left center;
+	padding-left:15px;
+	color:red;
+}
+</style>
+{% endblock %}
+
+{% block content %}
+<div class="fancy">
+<h1>Resend Activation Email</h1>
+<form action="" method="post" autocomplete="off">
+<table>
+<tr><th>Email:</th><td>{{ form.email }}</td><td class="info"><span id="email_info" {% if form.email.errors %}class="fail"{% endif %}>{% for error in form.email.errors %}{{ error }}{% endfor %}</span></td></tr>
+<tr><th>&nbsp;</th><td style="text-align:center"><input type="submit" value="Send"/></td><td class="info">&nbsp;</td></tr>
+</table>
+
+</form>
+<br>
+<h2>Already activated? <a href="/account/login/">Login</a></h2>
+<br>
+</div>
+{% endblock %}
+
